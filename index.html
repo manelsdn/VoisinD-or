@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GrannyHelp - Projet SOL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="Accueil GrannyHelp">
+      <img src="https://raw.githubusercontent.com/soooofiane/UX-Sol/main/Group%201.png" alt="Logo GrannyHelp">
+      <span>Projet SOL</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <button class="nav-link active" data-page="accueil">Accueil</button>
+      <button class="nav-link" data-page="ux">UX</button>
+      <button class="nav-link" data-page="po">PO</button>
+      <button class="nav-link" data-page="maquette">Maquette</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="page active-page">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Projet 2 SOL - Solidarité intergénérationnelle</p>
+          <h1>GrannyHelp</h1>
+          <p class="tagline">Petits services. Grands liens.</p>
+          <p class="lead">GrannyHelp met en relation des jeunes et des personnes âgées pour des services du quotidien : courses, ménage, petit bricolage, aide informatique et accompagnement simple dans le quartier.</p>
+          <div class="hero-actions">
+            <button class="primary-action" data-page="po">Voir la partie PO</button>
+            <button class="secondary-action" data-page="ux">Voir l’UX</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://raw.githubusercontent.com/soooofiane/UX-Sol/main/Frame.png" alt="Illustration d’une rencontre entre générations">
+        </div>
+      </div>
+
+      <section class="section-band">
+        <h2>Ce que le professeur demande pour J2</h2>
+        <div class="grid three">
+          <article class="card"><h3>Roadmap V0</h3><p>Un tableau d’EPICs pour clarifier les grandes fonctionnalités du produit.</p></article>
+          <article class="card"><h3>Besoins utilisateurs</h3><p>Expliquer les besoins des personnes âgées, des accompagnateurs et des jeunes volontaires.</p></article>
+          <article class="card"><h3>Approches retenues</h3><p>Dire comment GrannyHelp répond concrètement à ces besoins : proximité, disponibilité et type de service.</p></article>
+        </div>
+      </section>
+
+      <section class="section-band muted-band">
+        <h2>Répartition simple</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Personne</th><th>Rôle</th><th>Mission</th></tr></thead>
+            <tbody>
+              <tr><td>Sofiane</td><td>UX / Designer</td><td>Maquettes, charte graphique, parcours utilisateur et prototype.</td></tr>
+              <tr><td>Manel</td><td>Product Owner</td><td>Vision produit, Lean Canvas, roadmap V0, modalités et user stories.</td></tr>
+              <tr><td>Sara</td><td>Développeuse</td><td>Analyse technique, modèle Firestore et structure des pages métier.</td></tr>
+              <tr><td>Youmna</td><td>Développeuse</td><td>POC inscription / connexion avec Firebase Auth et Firestore.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section id="ux" class="page">
+      <div class="page-heading">
+        <p class="eyebrow">UX - Travail de Sofiane</p>
+        <h1>Une expérience simple, locale et humaine</h1>
+        <p>Cette partie reprend la direction UX du dépôt de Sofiane : identité visuelle, personas, parcours, storyboard, Value Proposition Canvas et validation.</p>
+      </div>
+
+      <div class="subnav" aria-label="Sous-menu UX">
+        <a href="#ux-proposition">Proposition</a>
+        <a href="#ux-charte">Charte graphique</a>
+        <a href="#ux-personas">Personas</a>
+        <a href="#ux-parcours">Parcours UX</a>
+        <a href="#ux-storyboard">Storyboard</a>
+        <a href="#ux-validation">Validation</a>
+      </div>
+
+      <section id="ux-proposition" class="section-band">
+        <h2>Proposition de service</h2>
+        <p>GrannyHelp met en relation des jeunes et des personnes âgées pour des services à domicile ponctuels ou réguliers : courses, ménage, petit bricolage et informatique. Le rapprochement repose sur trois critères : la proximité, la disponibilité et le type de service.</p>
+        <p>La personne âgée peut utiliser l’application elle-même ou passer par un accompagnateur. Dans ce cas, l’accompagnateur organise la demande avec l’accord du proche, tout en gardant le bénéficiaire clairement identifié dans l’interface.</p>
+      </section>
+
+      <section id="ux-charte" class="section-band muted-band">
+        <h2>Charte graphique</h2>
+        <div class="grid two">
+          <article class="card"><h3>Marque</h3><p><strong>Nom :</strong> GrannyHelp<br><strong>Signature :</strong> Petits services. Grands liens.<br><strong>Promesse :</strong> Un petit coup de main. Un grand sourire.</p></article>
+          <article class="card"><h3>Ton</h3><p>Le ton est chaleureux, concret et respectueux. L’application vouvoie les utilisateurs et évite les formulations froides ou trop techniques.</p></article>
+        </div>
+        <div class="swatches">
+          <div><span style="background:#F6DC69"></span><strong>Soleil</strong><small>#F6DC69</small></div>
+          <div><span style="background:#28382F"></span><strong>Forêt</strong><small>#28382F</small></div>
+          <div><span style="background:#F8F7F1"></span><strong>Papier</strong><small>#F8F7F1</small></div>
+          <div><span style="background:#E8EDDF"></span><strong>Sauge</strong><small>#E8EDDF</small></div>
+          <div><span style="background:#F3DFD2"></span><strong>Pêche</strong><small>#F3DFD2</small></div>
+        </div>
+      </section>
+
+      <section id="ux-personas" class="section-band">
+        <h2>Personas</h2>
+        <div class="grid three">
+          <article class="card"><h3>Lucas, 22 ans</h3><p>Jeune volontaire. Il veut rendre service près de chez lui sur ses temps libres. Il a besoin de demandes claires, proches et compatibles avec ses disponibilités.</p></article>
+          <article class="card"><h3>Camille, 46 ans</h3><p>Accompagnatrice. Elle organise une partie de l’aide quotidienne pour sa mère Madeleine, sans décider à sa place.</p></article>
+          <article class="card"><h3>Madeleine, 78 ans</h3><p>Bénéficiaire. Elle souhaite rester chez elle, recevoir une aide simple et garder un lien humain, même sans utiliser directement l’application.</p></article>
+        </div>
+      </section>
+
+      <section id="ux-parcours" class="section-band muted-band">
+        <h2>Parcours UX</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Parcours</th><th>Étapes principales</th></tr></thead>
+            <tbody>
+              <tr><td>Jeune volontaire</td><td>Bienvenue, choix du rôle, compte, quartier, services proposés, besoins proches, demande, échange.</td></tr>
+              <tr><td>Accompagnateur</td><td>Bienvenue, compte, proche accompagné, accueil “Pour Madeleine”, recherche, profil jeune, demande, suivi.</td></tr>
+              <tr><td>Personne âgée autonome</td><td>Bienvenue, recherche d’aide, compte, quartier, demande, échange, suivi.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="ux-storyboard" class="section-band">
+        <h2>Storyboard : des courses, et bien plus</h2>
+        <div class="grid three">
+          <article class="card"><h3>1. Le besoin</h3><p>Madeleine manque de quelques courses et en parle à Camille.</p></article>
+          <article class="card"><h3>2. Le relais</h3><p>Camille inscrit sa mère comme proche accompagné.</p></article>
+          <article class="card"><h3>3. Le bon voisin</h3><p>Camille filtre les courses à proximité et trouve Lucas.</p></article>
+          <article class="card"><h3>4. L’accord</h3><p>Camille précise le besoin, Lucas confirme sa disponibilité.</p></article>
+          <article class="card"><h3>5. La rencontre</h3><p>Lucas apporte les courses et échange avec Madeleine.</p></article>
+          <article class="card"><h3>6. La suite</h3><p>Madeleine peut donner un pourboire librement et prévoir un prochain service.</p></article>
+        </div>
+      </section>
+
+      <section id="ux-validation" class="section-band muted-band">
+        <h2>Validation proposée</h2>
+        <ul class="checklist">
+          <li>Tester le choix du rôle sans aide.</li>
+          <li>Vérifier que l’utilisateur comprend la différence entre accompagnateur et bénéficiaire.</li>
+          <li>Tester la recherche avec service, distance et disponibilité.</li>
+          <li>Vérifier que la demande envoyée n’est pas confondue avec un service confirmé.</li>
+          <li>Vérifier que le pourboire est compris comme facultatif et hors application.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="po" class="page">
+      <div class="page-heading">
+        <p class="eyebrow">PO - Partie de Manel</p>
+        <h1>Vision produit, Lean Canvas et Roadmap V0</h1>
+        <p>Cette page regroupe la partie Product Owner : cadrage, besoins utilisateurs, EPICs, modalités de fonctionnement et premières user stories.</p>
+      </div>
+
+      <div class="subnav" aria-label="Sous-menu PO">
+        <a href="#po-lean">Lean Canvas</a>
+        <a href="#po-modalites">Modalités</a>
+        <a href="#po-roadmap">Roadmap V0</a>
+        <a href="#po-stories">User stories</a>
+        <a href="#po-priorites">Priorités J2</a>
+      </div>
+
+      <section id="po-lean" class="section-band">
+        <h2>Lean Canvas</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bloc</th><th>Contenu</th></tr></thead>
+            <tbody>
+              <tr><td>Problème</td><td>Les personnes âgées ont parfois besoin d’aide pour des tâches simples. Les proches ne sont pas toujours disponibles et les jeunes volontaires ne savent pas où proposer leur aide.</td></tr>
+              <tr><td>Utilisateurs</td><td>Personnes âgées autonomes, accompagnateurs familiaux ou associatifs, jeunes volontaires du quartier.</td></tr>
+              <tr><td>Valeur unique</td><td>Une application simple pour trouver une aide locale, humaine et adaptée au quotidien.</td></tr>
+              <tr><td>Solution</td><td>Mise en relation par proximité, disponibilité et type de service, avec demande directe ou demande par accompagnateur.</td></tr>
+              <tr><td>Indicateurs</td><td>Demandes créées, demandes acceptées, temps pour trouver une aide, satisfaction après service.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="po-modalites" class="section-band muted-band">
+        <h2>Modalités de fonctionnement</h2>
+        <p>La remarque du professeur signifie que GrannyHelp ne doit pas traiter un seul cas. Le produit doit couvrir plusieurs cas proches autour d’un même besoin : aider une personne âgée dans son quotidien.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Modalité</th><th>Exemple</th><th>Priorité</th></tr></thead>
+            <tbody>
+              <tr><td>Demande par accompagnateur</td><td>Camille organise les courses pour Madeleine.</td><td>MUST</td></tr>
+              <tr><td>Demande directe</td><td>Madeleine demande une aide informatique.</td><td>SHOULD</td></tr>
+              <tr><td>Service ponctuel</td><td>Un coup de main samedi après-midi.</td><td>MUST</td></tr>
+              <tr><td>Service régulier</td><td>Courses chaque mercredi matin.</td><td>SHOULD</td></tr>
+              <tr><td>Recherche locale</td><td>Voir les jeunes disponibles à moins de 2 km.</td><td>MUST</td></tr>
+              <tr><td>Messagerie</td><td>Se mettre d’accord avant la rencontre.</td><td>SHOULD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="po-roadmap" class="section-band">
+        <h2>Roadmap V0 - EPICs</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>EPIC</th><th>Besoin utilisateur</th><th>Approche retenue</th><th>Priorité</th></tr></thead>
+            <tbody>
+              <tr><td>Inscription / Connexion</td><td>Accéder simplement à l’application.</td><td>POC Firebase Auth avec messages d’erreur et succès.</td><td>MUST</td></tr>
+              <tr><td>Choix du rôle</td><td>Adapter l’expérience à l’utilisateur.</td><td>Jeune, accompagnateur ou personne âgée autonome.</td><td>MUST</td></tr>
+              <tr><td>Gestion d’un proche</td><td>Organiser une aide pour une personne âgée sans smartphone.</td><td>Fiche proche avec prénom, quartier, lien et accord.</td><td>MUST</td></tr>
+              <tr><td>Recherche d’aide</td><td>Trouver une aide compatible.</td><td>Filtres par service, distance et disponibilité.</td><td>MUST</td></tr>
+              <tr><td>Création de demande</td><td>Formuler un besoin clair.</td><td>Service, date, heure, fréquence et précisions.</td><td>MUST</td></tr>
+              <tr><td>Messagerie</td><td>Se mettre d’accord avant le service.</td><td>Conversation simple entre jeune et demandeur.</td><td>SHOULD</td></tr>
+              <tr><td>Profil utilisateur</td><td>Rassurer avant de demander une aide.</td><td>Profil avec services, distance, disponibilité et présentation.</td><td>SHOULD</td></tr>
+              <tr><td>Pourboire libre</td><td>Respecter le fonctionnement prévu par le sujet.</td><td>Pas de paiement intégré, seulement une mention claire.</td><td>COULD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="po-stories" class="section-band muted-band">
+        <h2>Premières user stories</h2>
+        <div class="grid two">
+          <article class="card"><h3>US-01</h3><p>En tant qu’utilisateur, je veux créer un compte afin d’accéder à GrannyHelp.</p></article>
+          <article class="card"><h3>US-02</h3><p>En tant qu’utilisateur, je veux choisir mon rôle afin d’avoir une expérience adaptée.</p></article>
+          <article class="card"><h3>US-03</h3><p>En tant qu’accompagnateur, je veux ajouter un proche afin d’organiser une demande pour lui.</p></article>
+          <article class="card"><h3>US-04</h3><p>En tant que demandeur, je veux filtrer les aides par service, distance et disponibilité.</p></article>
+          <article class="card"><h3>US-05</h3><p>En tant que demandeur, je veux envoyer une demande claire avec une date et une heure.</p></article>
+          <article class="card"><h3>US-06</h3><p>En tant que jeune, je veux consulter les demandes proches afin de proposer mon aide.</p></article>
+        </div>
+      </section>
+
+      <section id="po-priorites" class="section-band">
+        <h2>Priorités pour J2</h2>
+        <ol class="steps">
+          <li>Présenter la vision GrannyHelp en une minute.</li>
+          <li>Montrer les utilisateurs : Lucas, Camille et Madeleine.</li>
+          <li>Présenter la Roadmap V0 sous forme d’EPICs.</li>
+          <li>Expliquer les modalités de fonctionnement proches.</li>
+          <li>Montrer que le POC inscription / connexion a commencé.</li>
+        </ol>
+      </section>
+    </section>
+
+    <section id="maquette" class="page">
+      <div class="page-heading">
+        <p class="eyebrow">Maquette</p>
+        <h1>Prototype GrannyHelp</h1>
+        <p>Cette page rassemble la maquette et les écrans clés issus du travail UX de Sofiane.</p>
+      </div>
+
+      <section class="section-band">
+        <div class="mockup-layout">
+          <div>
+            <h2>Écrans principaux</h2>
+            <ul class="checklist">
+              <li>Bienvenue avec logo, illustration et promesse.</li>
+              <li>Inscription en plusieurs étapes avec choix du rôle.</li>
+              <li>Connexion et récupération de mot de passe.</li>
+              <li>Accueil contextualisé selon le rôle.</li>
+              <li>Recherche par service, distance et disponibilité.</li>
+              <li>Profil d’un jeune volontaire.</li>
+              <li>Demande ponctuelle ou régulière.</li>
+              <li>Messagerie et suivi de demande.</li>
+            </ul>
+            <a class="external-link" href="https://github.com/soooofiane/UX-Sol" target="_blank" rel="noreferrer">Voir le dépôt UX de Sofiane</a>
+          </div>
+          <figure class="mockup-preview">
+            <img src="https://raw.githubusercontent.com/soooofiane/UX-Sol/main/grannyhelp-preview.png" alt="Aperçu de la maquette GrannyHelp">
+            <figcaption>Aperçu de la maquette GrannyHelp.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-band muted-band">
+        <h2>À relier avec le développement</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Écran UX</th><th>Fonction DEV correspondante</th></tr></thead>
+            <tbody>
+              <tr><td>Inscription</td><td>Firebase Auth + création du profil Firestore.</td></tr>
+              <tr><td>Choix du rôle</td><td>Champ `role` dans la collection `users`.</td></tr>
+              <tr><td>Gestion d’un proche</td><td>Collection ou sous-collection `beneficiaries`.</td></tr>
+              <tr><td>Recherche</td><td>Lecture des demandes et filtres côté interface.</td></tr>
+              <tr><td>Création de demande</td><td>Collection `requests` avec service, date, heure et statut.</td></tr>
+              <tr><td>Messagerie</td><td>Collection `messages` ou simulation dans un premier temps.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>GrannyHelp - Projet SOL</span>
+    <a href="https://github.com/manelsdn/SOL">Dépôt GitHub</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
