@@ -17,10 +17,16 @@ Permettre a une personne agee, ou a son accompagnateur, de trouver une aide proc
 
 ## Organisation du depot
 
+Documents demandes ou utiles pour la J2 :
+
+- `docs/lean-canvas.md` : Lean Canvas du projet
 - `docs/roadmap-v0.md` : roadmap PO au format tableau des EPICs
 - `docs/modalites-fonctionnement.md` : cas d'usage et modalites de fonctionnement
 - `docs/user-stories-v0.md` : premieres user stories a partir des maquettes UX
-- `docs/repartition-equipe.md` : repartition simple des roles
+
+Document d'organisation interne :
+
+- `docs/repartition-equipe.md` : repartition simple des roles dans l'equipe
 
 ## Equipe
 
