@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dossier Designer - GrannyHelp</title>
+  <style>
+    :root {
+      --paper: #f8f7f1;
+      --ink: #28382f;
+      --muted: #687066;
+      --yellow: #f6dc69;
+      --sage: #e8eddf;
+      --peach: #f3dfd2;
+      --line: #dedfd5;
+      --white: #fffefb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 22px 58px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      line-height: 1.12;
+    }
+    h1 { font-size: clamp(42px, 6vw, 78px); margin: 0 0 18px; }
+    h2 { font-size: 34px; margin: 0 0 18px; }
+    h3 { font-size: 24px; margin: 0 0 10px; }
+    p, li, td { color: var(--muted); }
+    img, video { max-width: 100%; display: block; }
+    section { padding: 34px 0; border-top: 1px solid var(--line); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
+      gap: 36px;
+      align-items: center;
+      border-top: 0;
+      padding-top: 0;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #657550;
+    }
+    .lead { font-size: 18px; max-width: 760px; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .swatch span {
+      display: block;
+      height: 92px;
+      border-radius: 12px;
+      border: 1px solid #28382f18;
+      margin-bottom: 8px;
+    }
+    .persona {
+      border-top: 4px solid var(--sage);
+    }
+    .persona:nth-child(2) { border-top-color: var(--peach); }
+    .persona:nth-child(3) { border-top-color: var(--yellow); }
+    .persona img {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--sage);
+      margin-bottom: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    th { background: var(--sage); color: var(--ink); }
+    tr:last-child td, tr:last-child th { border-bottom: 0; }
+    .asset-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .asset-row img {
+      border-radius: 14px;
+      background: var(--sage);
+      aspect-ratio: 1;
+      object-fit: contain;
+      padding: 8px;
+    }
+    @media (max-width: 860px) {
+      .hero, .card-grid, .two, .asset-row { grid-template-columns: 1fr; }
+      .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Projet SOL - Designer UX</p>
+        <h1>GrannyHelp</h1>
+        <p class="lead">Une application web mobile qui rapproche les jeunes, les personnes agees et leurs accompagnateurs autour de petits services du quotidien.</p>
+        <p><strong>Slogan retenu :</strong> Petits services. Grands liens.</p>
+      </div>
+      <video src="assets/video-presentation-grannyhelp.mp4" controls muted playsinline aria-label="Video de presentation GrannyHelp"></video>
+    </section>
+
+    <section>
+      <p class="eyebrow">01 / Marque</p>
+      <h2>Deux propositions de marque</h2>
+      <div class="card-grid two">
+        <article class="card">
+          <h3>GrannyHelp</h3>
+          <p><strong>Slogan :</strong> Petits services. Grands liens.</p>
+          <p>Choix principal : chaleureux, direct, coherent avec les assets deja produits.</p>
+        </article>
+        <article class="card">
+          <h3>Voisins d'Or</h3>
+          <p><strong>Slogan :</strong> Un coup de main au coin de la rue.</p>
+          <p>Alternative : plus locale et francophone, a garder si le nom anglais pose question.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">02 / Charte graphique</p>
+      <h2>Identite visuelle</h2>
+      <div class="swatches">
+        <div class="swatch"><span style="background:#f6dc69"></span><strong>Soleil</strong><p>#F6DC69</p></div>
+        <div class="swatch"><span style="background:#28382f"></span><strong>Foret</strong><p>#28382F</p></div>
+        <div class="swatch"><span style="background:#f8f7f1"></span><strong>Papier</strong><p>#F8F7F1</p></div>
+        <div class="swatch"><span style="background:#e8eddf"></span><strong>Sauge</strong><p>#E8EDDF</p></div>
+        <div class="swatch"><span style="background:#f3dfd2"></span><strong>Peche</strong><p>#F3DFD2</p></div>
+      </div>
+      <div class="card-grid two" style="margin-top:18px">
+        <article class="card"><h3>Typographie</h3><p>Georgia pour les titres, Segoe UI pour l'interface et les formulaires.</p></article>
+        <article class="card"><h3>Ton</h3><p>Simple, rassurant, non infantilisant. On parle de voisinage, de choix et d'entraide.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">03 / Assets renommes</p>
+      <h2>Fichiers visuels clairs</h2>
+      <div class="asset-row">
+        <img src="assets/logo-grannyhelp.png" alt="Logo GrannyHelp">
+        <img src="assets/illustration-rencontre-perron.png" alt="Illustration rencontre">
+        <img src="assets/illustration-mamie.png" alt="Illustration mamie">
+        <img src="assets/persona-camille-accompagnatrice.png" alt="Persona Camille">
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">04 / Personas</p>
+      <h2>Trois profils au coeur du service</h2>
+      <div class="card-grid">
+        <article class="card persona"><img src="assets/persona-lucas-jeune-volontaire.png" alt="Lucas"><h3>Lucas</h3><p>Jeune volontaire qui veut rendre service pres de chez lui pendant ses temps libres.</p></article>
+        <article class="card persona"><img src="assets/persona-camille-accompagnatrice.png" alt="Camille"><h3>Camille</h3><p>Accompagnatrice qui organise une aide pour sa mere sans decider a sa place.</p></article>
+        <article class="card persona"><img src="assets/persona-madeleine-beneficiaire.png" alt="Madeleine"><h3>Madeleine</h3><p>Beneficiaire qui veut rester autonome, etre aidee simplement et garder du lien humain.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">05 / Value Proposition Canvas</p>
+      <h2>Deux profils de marketplace</h2>
+      <table>
+        <thead><tr><th>Profil</th><th>Jobs</th><th>Pains</th><th>Gains</th><th>Reponse GrannyHelp</th></tr></thead>
+        <tbody>
+          <tr><th>Accompagnateur</th><td>Trouver une aide, coordonner, suivre.</td><td>Manque de temps, incertitude, peur d'exclure le proche.</td><td>Aide fiable, suivi clair, proche rassure.</td><td>Profil proche, contexte "Pour Madeleine", filtres et suivi.</td></tr>
+          <tr><th>Jeune volontaire</th><td>Rendre service localement, choisir son engagement.</td><td>Besoins flous, trajets longs, horaires incompatibles.</td><td>Se sentir utile, rencontrer, choisir des missions simples.</td><td>Demandes filtrees, details du service, disponibilites visibles.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <p class="eyebrow">06 / Site vitrine</p>
+      <h2>Contenus a presenter</h2>
+      <table>
+        <thead><tr><th>Bloc</th><th>Contenu</th></tr></thead>
+        <tbody>
+          <tr><th>Produit</th><td>Application web mobile de mise en relation locale.</td></tr>
+          <tr><th>Services</th><td>Courses, menage leger, bricolage simple, aide informatique, presence de voisinage.</td></tr>
+          <tr><th>Tarifs</th><td>Aucun paiement obligatoire. Pourboire libre et facultatif.</td></tr>
+          <tr><th>Partenaires</th><td>Associations, mairies de quartier, residences seniors, structures etudiantes.</td></tr>
+          <tr><th>FAQ</th><td>Smartphone non obligatoire pour l'aine, role accompagnateur, confiance, pourboire libre.</td></tr>
+          <tr><th>Legal</th><td>CGV, mentions legales, confidentialite et contact a finaliser avant lancement.</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

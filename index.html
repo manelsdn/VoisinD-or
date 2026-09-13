@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GrannyHelp - Petits services. Grands liens.</title>
+  <link rel="icon" type="image/png" href="assets/logo.png?v=favicon-1">
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png?v=favicon-1">
+  <link rel="stylesheet" href="styles.css?v=home-video-1">
+</head>
+<body>
+  <header class="studio-header">
+    <a class="studio-brand" href="#accueil" aria-label="GrannyHelp">
+      <img src="assets/logo.png" alt="GrannyHelp">
+    </a>
+    <nav aria-label="Dossier de conception">
+      <button class="studio-tab active" data-panel="accueil" aria-pressed="true">Accueil</button>
+      <button class="studio-tab" data-panel="maquettes" aria-pressed="false">Maquette</button>
+      <button class="studio-tab" data-panel="charte" aria-pressed="false">Design</button>
+      <button class="studio-tab" data-panel="parcours" aria-pressed="false">Parcours utilisateurs</button>
+      <button class="studio-tab" data-panel="site-vitrine" aria-pressed="false">Site vitrine</button>
+      <button class="studio-tab" data-panel="produit" aria-pressed="false">Produit</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="studio-panel">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SOL</p>
+          <h1>Petits services.<br><em>Grands liens.</em></h1>
+          <p class="lead">GrannyHelp rapproche les jeunes, les personnes âgées et leurs accompagnateurs autour de petits services du quotidien : courses, ménage, bricolage, aide informatique et moments de voisinage.</p>
+          <div class="actions">
+            <button class="home-primary" data-panel="maquettes">Voir la maquette</button>
+            <button class="home-secondary" data-panel="produit">Voir le produit</button>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <video class="hero-video" src="assets/mami.mp4" autoplay muted loop playsinline controls aria-label="Vidéo de présentation GrannyHelp"></video>
+        </figure>
+      </div>
+
+      <section class="home-band">
+        <div>
+          <h2>L’idée en une phrase</h2>
+          <p>Une personne âgée, ou un proche qui l’accompagne, peut trouver un jeune disponible près de chez elle pour un service ponctuel ou régulier.</p>
+        </div>
+        <div class="home-mini-grid">
+          <article><strong>Proche</strong><span>Une aide dans le quartier.</span></article>
+          <article><strong>Simple</strong><span>Un besoin clair, un créneau, un échange.</span></article>
+          <article><strong>Humain</strong><span>Le service crée aussi du lien.</span></article>
+        </div>
+      </section>
+
+      <section class="home-band">
+        <h2>Les trois personnes au cœur du service</h2>
+        <div class="home-cards three">
+          <article><img class="home-photo" src="assets/personas/lucas.png" alt="Portrait illustré de Lucas"><h3>Lucas</h3><p>Étudiant en communication, il souhaite rendre service près de chez lui pendant ses temps libres.</p></article>
+          <article><img class="home-photo" src="assets/personas/camille.png" alt="Portrait illustré de Camille"><h3>Camille</h3><p>Accompagnatrice, elle organise une aide pour sa mère sans décider à sa place.</p></article>
+          <article><img class="home-photo" src="assets/personas/madeleine.png" alt="Portrait illustré de Madeleine"><h3>Madeleine</h3><p>Bénéficiaire, elle veut rester autonome, être aidée simplement et garder un contact humain.</p></article>
+        </div>
+      </section>
+
+      <section class="home-band">
+        <h2>Réalisation de l’application</h2>
+        <p>Le projet a été construit en équipe, avec une répartition claire entre design, produit et développement.</p>
+        <div class="team-grid">
+          <article>
+            <span>Design</span>
+            <strong>Sofiane</strong>
+          </article>
+          <article>
+            <span>Product Owner</span>
+            <strong>Manel</strong>
+          </article>
+          <article>
+            <span>Développement</span>
+            <strong>Sara & Youmna</strong>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="maquettes" class="studio-panel" hidden>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">L’ENTRAIDE, JUSTE À CÔTÉ.</p>
+          <h1>Petits services.<br><em>Grands liens.</em><span class="sparkle" aria-hidden="true">✳</span></h1>
+        </div>
+        <div class="intro-aside">
+          <p>Un coup de main pour le quotidien.<br>Une rencontre qui fait du bien.</p>
+          <p class="muted">GrannyHelp rapproche les générations,<br>à l’échelle d’un quartier.</p>
+          <span class="handwritten">On a tous à s’apporter ↙</span>
+        </div>
+      </div>
+      <div class="canvas-toolbar">
+        <div class="screen-picker" aria-label="Écran à explorer">
+          <button class="selected" data-screen="overview" aria-pressed="true">Vue d’ensemble</button>
+          <button data-screen="welcome" aria-pressed="false">Bienvenue</button>
+          <button data-screen="signup" aria-pressed="false">Inscription</button>
+          <button data-screen="login" aria-pressed="false">Connexion</button>
+          <button data-screen="home" aria-pressed="false">Accueil</button>
+        </div>
+        <span class="prototype-note">Prototype interactif · données fictives</span>
+      </div>
+      <div id="screens" class="screens"></div>
+      <div class="canvas-footer">
+        <span><i class="little-dot"></i> Une app pensée pour les jeunes, les aînés et leurs accompagnateurs.</span>
+        <span>01 — PREMIERS PAS</span>
+      </div>
+    </section>
+
+    <section id="charte" class="studio-panel" hidden></section>
+    <section id="parcours" class="studio-panel" hidden></section>
+
+    <section id="site-vitrine" class="studio-panel" hidden>
+      <div class="brand-intro">
+        <p class="eyebrow">Designer / Site vitrine</p>
+        <h1>Présenter GrannyHelp,<br>rassurer et donner envie.</h1>
+        <p>Cette partie complète les attendus UX du site vitrine : offre, fonctionnement, tarifs, partenaires, FAQ, témoignages, cadre légal et appel à l’action.</p>
+      </div>
+
+      <nav class="ux-nav" aria-label="Sections site vitrine">
+        <a href="#vitrine-services">Offre</a>
+        <a href="#vitrine-fonctionnement">Comment ça marche</a>
+        <a href="#vitrine-preuves">Témoignages</a>
+        <a href="#vitrine-faq">FAQ</a>
+        <a href="#vitrine-legal">Cadre légal</a>
+      </nav>
+
+      <section class="ux-block" id="vitrine-services">
+        <p class="eyebrow">01 / Offre</p>
+        <h2>Produits, services et tarifs</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bloc vitrine</th><th>Contenu proposé</th><th>Message clé</th></tr></thead>
+            <tbody>
+              <tr><th>Produit</th><td>Application web mobile de mise en relation locale.</td><td>Une aide simple à trouver, sans installation compliquée.</td></tr>
+              <tr><th>Services</th><td>Courses, ménage léger, bricolage simple, aide informatique, présence de voisinage.</td><td>Des petits services du quotidien, cadrés et compréhensibles.</td></tr>
+              <tr><th>Tarifs</th><td>Aucun paiement obligatoire dans l’application. Pourboire libre, donné directement si la personne le souhaite.</td><td>L’entraide reste accessible et non marchande.</td></tr>
+              <tr><th>Partenaires</th><td>Associations locales, résidences seniors, mairies de quartier, structures étudiantes.</td><td>Le service peut s’appuyer sur des relais de confiance.</td></tr>
+              <tr><th>CTA</th><td>Créer une demande, proposer son aide, contacter l’équipe projet.</td><td>Un visiteur doit comprendre immédiatement quoi faire.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-fonctionnement">
+        <p class="eyebrow">02 / Parcours</p>
+        <h2>Comment ça marche</h2>
+        <div class="story-grid">
+          <article class="story-step"><span class="step-label">ÉTAPE 01</span><h3>On précise le besoin</h3><p>La personne âgée ou son accompagnateur choisit un service, un quartier, une date et quelques détails utiles.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 02</span><h3>On trouve un jeune proche</h3><p>Les profils sont filtrés selon le type de service, la distance et les disponibilités.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 03</span><h3>On confirme ensemble</h3><p>La messagerie sert à valider le créneau, le lieu et le cadre du service avant la rencontre.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 04</span><h3>Le lien continue</h3><p>Le service peut rester ponctuel ou devenir régulier si tout le monde est d’accord.</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-preuves">
+        <p class="eyebrow">03 / Confiance</p>
+        <h2>Témoignages fictifs pour la V0</h2>
+        <div class="persona-grid">
+          <article class="persona"><img class="persona-photo" src="assets/personas/camille.png" alt="Portrait de Camille"><h3>Camille</h3><p>“Je peux organiser une aide pour ma mère sans lui retirer sa place dans la décision.”</p></article>
+          <article class="persona"><img class="persona-photo" src="assets/personas/lucas.png" alt="Portrait de Lucas"><h3>Lucas</h3><p>“Je vois les besoins proches de chez moi et je choisis ce que je peux vraiment faire.”</p></article>
+          <article class="persona"><img class="persona-photo" src="assets/personas/madeleine.png" alt="Portrait de Madeleine"><h3>Madeleine</h3><p>“Je garde mes habitudes, et je rencontre quelqu’un du quartier.”</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-faq">
+        <p class="eyebrow">04 / FAQ</p>
+        <h2>Questions fréquentes</h2>
+        <div class="brand-grid">
+          <article class="brand-card"><h3>La personne âgée doit-elle avoir un smartphone ?</h3><p>Non. Un proche peut créer et suivre une demande avec son accord.</p></article>
+          <article class="brand-card"><h3>Le service est-il payant ?</h3><p>Le pourboire est libre et facultatif. Il ne passe pas par l’application dans la V0.</p></article>
+          <article class="brand-card"><h3>Comment la confiance est-elle expliquée ?</h3><p>La V0 affiche les profils, le service demandé, les règles d’entraide et une messagerie avant la rencontre.</p></article>
+          <article class="brand-card"><h3>Quels services sont prévus au départ ?</h3><p>Courses, ménage léger, bricolage simple et aide informatique.</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-legal">
+        <p class="eyebrow">05 / Pages à prévoir</p>
+        <h2>Cadre légal et contact</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Page</th><th>Contenu minimum V0</th><th>Statut</th></tr></thead>
+            <tbody>
+              <tr><th>CGV / règles d’entraide</th><td>Règles de respect, ponctualité, responsabilité et pourboire libre.</td><td>À rédiger proprement avant lancement.</td></tr>
+              <tr><th>Mentions légales</th><td>Nom du projet, responsable, contact, hébergeur.</td><td>À compléter selon l’hébergement choisi.</td></tr>
+              <tr><th>Confidentialité</th><td>Données collectées, finalité, durée de conservation, droits utilisateur.</td><td>À aligner avec Firebase/Firestore.</td></tr>
+              <tr><th>Contact</th><td>Formulaire ou adresse de contact projet.</td><td>À brancher plus tard.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section id="produit" class="studio-panel" hidden>
+      <div class="brand-intro">
+        <p class="eyebrow">Produit</p>
+        <h1>Une idée claire,<br>un plan simple.</h1>
+        <p>Cette partie traduit l’expérience GrannyHelp en vision produit : pourquoi le service existe, pour qui il est pensé, comment il fonctionne et quelles fonctionnalités sont prioritaires.</p>
+      </div>
+
+      <nav class="ux-nav" aria-label="Sections produit">
+        <a href="#po-vision">Vision</a>
+        <a href="#po-lean">Lean Canvas</a>
+        <a href="#po-modalites">Modalités</a>
+        <a href="#po-roadmap">Roadmap V0</a>
+        <a href="#po-scenarios">Scénarios</a>
+        <a href="#po-stories">User stories</a>
+        <a href="#po-us-detaillees">US détaillées</a>
+        <a href="#po-suite">Suite</a>
+      </nav>
+
+      <section class="ux-block" id="po-vision">
+        <p class="eyebrow">01 / Comprendre</p>
+        <h2>Vision produit</h2>
+        <article class="brand-card wide-card">
+          <p>GrannyHelp répond à un besoin simple : une personne âgée peut avoir besoin d’un petit coup de main, mais ses proches ne sont pas toujours disponibles. En face, des jeunes souhaitent se rendre utiles, mais ne savent pas toujours où trouver des besoins proches, clairs et compatibles avec leur emploi du temps.</p>
+          <p>Le produit se concentre donc sur une mise en relation locale, simple et rassurante, avec une place importante donnée à l’accompagnateur.</p>
+        </article>
+      </section>
+
+      <section class="ux-block" id="po-lean">
+        <p class="eyebrow">02 / Cadrer</p>
+        <h2>Lean Canvas</h2>
+        <div class="lean-canvas" aria-label="Lean Canvas GrannyHelp">
+          <article class="lean-card problem">
+            <span>01</span>
+            <h3>Problème</h3>
+            <ul>
+              <li>Les personnes âgées ont besoin d’aide pour de petites tâches du quotidien.</li>
+              <li>Les proches ne sont pas toujours disponibles.</li>
+              <li>Les jeunes volontaires ne savent pas où proposer leur aide.</li>
+            </ul>
+            <h4>Alternatives actuelles</h4>
+            <p>Famille, voisins, associations locales, ou absence d’aide.</p>
+          </article>
+          <article class="lean-card solution">
+            <span>02</span>
+            <h3>Solution</h3>
+            <ul>
+              <li>Mise en relation locale.</li>
+              <li>Recherche par service, distance et disponibilité.</li>
+              <li>Demande directe ou par accompagnateur.</li>
+            </ul>
+          </article>
+          <article class="lean-card value">
+            <span>03</span>
+            <h3>Proposition de valeur</h3>
+            <strong>Petits services. Grands liens.</strong>
+            <p>Une application simple pour trouver une aide locale, humaine et adaptée.</p>
+          </article>
+          <article class="lean-card advantage">
+            <span>04</span>
+            <h3>Avantage difficile à copier</h3>
+            <p>Un parcours pensé dès le départ pour les accompagnateurs et les personnes âgées sans smartphone.</p>
+          </article>
+          <article class="lean-card users">
+            <span>05</span>
+            <h3>Segments clients</h3>
+            <ul>
+              <li>Personnes âgées autonomes.</li>
+              <li>Accompagnateurs familiaux ou associatifs.</li>
+              <li>Jeunes volontaires du quartier.</li>
+            </ul>
+            <h4>Premiers utilisateurs</h4>
+            <p>Accompagnateurs qui organisent l’aide pour un proche.</p>
+          </article>
+          <article class="lean-card metrics">
+            <span>06</span>
+            <h3>Indicateurs clés</h3>
+            <ul>
+              <li>Comptes créés.</li>
+              <li>Demandes envoyées.</li>
+              <li>Demandes acceptées.</li>
+              <li>Délai pour trouver une aide.</li>
+            </ul>
+          </article>
+          <article class="lean-card channels">
+            <span>07</span>
+            <h3>Canaux</h3>
+            <ul>
+              <li>Application web mobile.</li>
+              <li>Site vitrine.</li>
+              <li>Bouche-à-oreille local.</li>
+              <li>Familles, associations et structures d’accompagnement.</li>
+            </ul>
+          </article>
+          <article class="lean-card costs">
+            <span>08</span>
+            <h3>Coûts</h3>
+            <p>Hébergement, maintenance, modération, communication locale, support utilisateurs et évolution technique.</p>
+          </article>
+          <article class="lean-card revenue">
+            <span>09</span>
+            <h3>Revenus</h3>
+            <p>Le pourboire reste libre et se fait directement entre le jeune et la personne âgée. Le projet peut aussi être financé par des partenariats avec des associations, des collectivités locales ou des structures d’accompagnement.</p>
+          </article>
+        </div>
+
+      </section>
+
+      <section class="ux-block" id="po-modalites">
+        <p class="eyebrow">03 / Fonctionner</p>
+        <h2>Modalités de fonctionnement</h2>
+        <p>Le service ne se limite pas à un seul scénario. Il couvre plusieurs situations proches, tout en gardant une logique simple.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Modalité</th><th>Description</th><th>Exemple</th><th>Priorité</th></tr></thead>
+            <tbody>
+              <tr><th>Demande par accompagnateur</th><td>Un proche crée et suit la demande.</td><td>Camille organise les courses pour Madeleine.</td><td>MUST</td></tr>
+              <tr><th>Demande directe</th><td>La personne âgée utilise elle-même l’application.</td><td>Madeleine demande une aide informatique.</td><td>SHOULD</td></tr>
+              <tr><th>Service ponctuel</th><td>Une aide demandée une seule fois.</td><td>Porter des courses samedi.</td><td>MUST</td></tr>
+              <tr><th>Service régulier</th><td>Une aide qui revient chaque semaine.</td><td>Courses tous les mercredis.</td><td>SHOULD</td></tr>
+              <tr><th>Recherche locale</th><td>Trouver une personne proche.</td><td>Voir les jeunes à moins de 2 km.</td><td>MUST</td></tr>
+              <tr><th>Messagerie</th><td>Se mettre d’accord avant le service.</td><td>Camille précise la liste à Lucas.</td><td>SHOULD</td></tr>
+              <tr><th>Pourboire libre</th><td>Aucun paiement obligatoire dans l’application.</td><td>Madeleine remercie Lucas directement.</td><td>COULD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="ux-block" id="po-roadmap">
+        <p class="eyebrow">04 / Prioriser</p>
+        <h2>Roadmap V0</h2>
+        <p>La roadmap part des EPICs : ce sont les grandes fonctionnalités à construire. Pour chaque EPIC, on relie le besoin utilisateur à une approche fonctionnelle concrète.</p>
+        <div class="table-wrap">
+          <table class="roadmap-table">
+            <thead><tr><th>EPIC</th><th>Vision produit : besoins et hypothèses</th><th>Approche retenue : solutions fonctionnelles</th></tr></thead>
+            <tbody>
+              <tr><th>Compte et authentification</th><td>L’utilisateur doit pouvoir créer un compte et revenir facilement sur l’application.</td><td>Inscription, connexion, déconnexion, gestion des erreurs et redirection vers l’espace utilisateur.</td></tr>
+              <tr><th>Rôles et profils</th><td>Le parcours doit différencier les jeunes volontaires, les accompagnateurs et les personnes âgées.</td><td>Choix du rôle, profil utilisateur, fiche jeune volontaire, informations visibles selon le rôle.</td></tr>
+              <tr><th>Accueil et navigation</th><td>L’utilisateur doit comprendre rapidement quoi faire après son arrivée dans l’application.</td><td>Accueil personnalisé selon le rôle, raccourcis vers les services, navigation mobile simple.</td></tr>
+              <tr><th>Accompagnement d’un proche</th><td>Une personne âgée peut ne pas utiliser l’application elle-même. Un proche doit pouvoir gérer les demandes avec son accord.</td><td>Création d’une fiche proche, affichage du contexte “Pour Madeleine”, mention de l’accord du proche.</td></tr>
+              <tr><th>Services et demandes</th><td>Le besoin doit être clair pour éviter les échanges flous et les malentendus.</td><td>Choix du type de service, description, date, heure, fréquence, statut de la demande.</td></tr>
+              <tr><th>Recherche locale</th><td>Les utilisateurs veulent une aide proche, disponible et adaptée au service demandé.</td><td>Filtres par service, proximité, disponibilité, affichage des profils compatibles.</td></tr>
+              <tr><th>Organisation et suivi</th><td>Après l’envoi d’une demande, l’utilisateur doit savoir où en est le service.</td><td>Statuts, suivi de demande, messagerie simple, confirmation avant la rencontre.</td></tr>
+              <tr><th>Cadre de confiance</th><td>Le service doit rester humain, rassurant et sans paiement obligatoire.</td><td>Charte d’entraide, rappel du pourboire libre, informations de profil et règles simples.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <section class="ux-block" id="po-scenarios">
+          <p class="eyebrow">04 bis / Arbitrer</p>
+          <h2>Deux scénarios pour la V0</h2>
+          <p>La roadmap peut être lue avec un scénario minimal à démontrer rapidement et un scénario cible à viser si le POC avance bien.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Scénario</th><th>Objectif</th><th>Fonctionnalités incluses</th><th>Ce qui reste hors périmètre</th></tr></thead>
+              <tbody>
+                <tr><th>Minimal MUST</th><td>Prouver le parcours principal Camille → Madeleine → Lucas.</td><td>Inscription, connexion, choix du rôle, profil accompagnateur, accueil, recherche filtrée, création de demande simulée ou enregistrée.</td><td>Paiement, notation, notifications, géolocalisation avancée, modération complète.</td></tr>
+                <tr><th>Cible SHOULD/COULD</th><td>Rendre le service plus réaliste et démontrable.</td><td>Messagerie, suivi de statut, service régulier, profils enrichis, données fictives nombreuses, réservation plus complète.</td><td>Production sécurisée, gestion juridique complète, app native.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <h3 class="subsection-title">Backlog V0 : découpage en user stories</h3>
+        <div class="table-wrap">
+          <table class="backlog-table">
+            <thead><tr><th>EPIC</th><th>User Story</th><th>Périmètre US</th><th>Priorisation US</th></tr></thead>
+            <tbody>
+              <tr><th>Compte et authentification</th><td>Créer un compte</td><td>Créer un compte avec e-mail et mot de passe, afficher les erreurs et poursuivre le parcours.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Compte et authentification</th><td>Se connecter</td><td>Saisir ses identifiants, gérer les erreurs et accéder à son espace.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Rôles et profils</th><td>Choisir son rôle</td><td>Sélectionner jeune volontaire, accompagnateur ou personne âgée, puis adapter les écrans.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Accueil et navigation</th><td>Afficher un accueil personnalisé</td><td>Afficher les actions principales, le contexte du rôle et les raccourcis utiles.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Accompagnement d’un proche</th><td>Ajouter un proche</td><td>Renseigner prénom, quartier, lien avec le proche et accord pour organiser les demandes.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Recherche locale</th><td>Rechercher une aide</td><td>Filtrer les profils par service, distance et disponibilité.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Services et demandes</th><td>Envoyer une demande</td><td>Créer une demande avec service, date, heure, fréquence et précisions.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Organisation et suivi</th><td>Suivre une demande</td><td>Afficher le statut : envoyée, en attente, confirmée ou terminée.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Organisation et suivi</th><td>Échanger avant le service</td><td>Prévoir une conversation simple pour préciser les détails de la rencontre.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Cadre de confiance</th><td>Comprendre le pourboire libre</td><td>Afficher que le pourboire est facultatif et se fait directement entre les personnes.</td><td><span class="priority-pill could">COULD</span></td></tr>
+              <tr><th>Services et demandes</th><td>Voir le détail d’un profil jeune</td><td>Afficher prénom, distance, services proposés, disponibilité et présentation courte.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Services et demandes</th><td>Voir le détail d’une demande</td><td>Afficher le service, le bénéficiaire, le créneau, la fréquence et les précisions.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Recherche locale</th><td>Filtrer par distance</td><td>Limiter les résultats à 500 m, 1 km ou 2 km.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Recherche locale</th><td>Filtrer par disponibilité</td><td>Afficher les profils disponibles aujourd’hui, demain ou ce week-end.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Organisation et suivi</th><td>Confirmer un créneau</td><td>Permettre au jeune et au demandeur de valider un horaire commun.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Organisation et suivi</th><td>Annuler une demande</td><td>Permettre d’annuler avant confirmation avec un message clair.</td><td><span class="priority-pill could">COULD</span></td></tr>
+              <tr><th>Cadre de confiance</th><td>Lire la charte d’entraide</td><td>Afficher les règles de respect, accord du proche et pourboire libre.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Profil et préférences</th><td>Modifier son quartier</td><td>Mettre à jour le quartier utilisé pour la recherche locale.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Profil et préférences</th><td>Modifier les informations du proche</td><td>Corriger prénom, quartier et lien avec le proche accompagné.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><th>Authentification</th><td>Se déconnecter</td><td>Fermer la session et revenir à l’écran de bienvenue.</td><td><span class="priority-pill must">MUST</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="ux-block" id="po-stories">
+        <p class="eyebrow">05 / Écrire</p>
+        <h2>Premières user stories</h2>
+        <p>Ces user stories servent de base pour transformer la maquette en fonctionnalités. Elles sont volontairement courtes, priorisées et testables.</p>
+        <div class="priority-legend" aria-label="Légende des priorités MoSCoW">
+          <span><i class="must-dot"></i><strong>MUST</strong> indispensable pour la V0</span>
+          <span><i class="should-dot"></i><strong>SHOULD</strong> important après le cœur du parcours</span>
+          <span><i class="could-dot"></i><strong>COULD</strong> bonus si le temps le permet</span>
+        </div>
+        <div class="story-backlog">
+          <article class="story-card must">
+            <div class="story-head"><span>US-01</span><strong>MUST</strong></div>
+            <h3>Créer un compte</h3>
+            <p>En tant qu’utilisateur, je veux créer un compte afin d’accéder à GrannyHelp.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>Le formulaire demande au minimum un e-mail et un mot de passe.</li>
+              <li>Un message clair apparaît si les informations sont incorrectes.</li>
+              <li>Après inscription, l’utilisateur arrive sur la suite du parcours.</li>
+            </ul>
+          </article>
+          <article class="story-card must">
+            <div class="story-head"><span>US-02</span><strong>MUST</strong></div>
+            <h3>Se connecter</h3>
+            <p>En tant qu’utilisateur inscrit, je veux me connecter afin de retrouver mon espace.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>L’utilisateur peut saisir son e-mail et son mot de passe.</li>
+              <li>Une erreur est affichée si le compte n’existe pas ou si le mot de passe est faux.</li>
+              <li>Une fois connecté, il accède à l’accueil de l’application.</li>
+            </ul>
+          </article>
+          <article class="story-card must">
+            <div class="story-head"><span>US-03</span><strong>MUST</strong></div>
+            <h3>Choisir son rôle</h3>
+            <p>En tant qu’utilisateur, je veux choisir mon rôle afin d’avoir une expérience adaptée.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>Les rôles disponibles sont : jeune volontaire, accompagnateur, personne âgée.</li>
+              <li>Le rôle choisi est visible dans le parcours.</li>
+              <li>Le contenu affiché change selon le rôle sélectionné.</li>
+            </ul>
+          </article>
+          <article class="story-card must">
+            <div class="story-head"><span>US-04</span><strong>MUST</strong></div>
+            <h3>Afficher un accueil personnalisé</h3>
+            <p>En tant qu’utilisateur connecté, je veux voir un accueil adapté à mon rôle afin d’accéder rapidement aux actions utiles.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>L’accueil affiche le prénom de l’utilisateur et son contexte.</li>
+              <li>Un accompagnateur voit clairement pour quel proche il agit.</li>
+              <li>Les raccourcis principaux sont visibles : services, demandes, messages et profil.</li>
+            </ul>
+          </article>
+          <article class="story-card must">
+            <div class="story-head"><span>US-05</span><strong>MUST</strong></div>
+            <h3>Ajouter un proche</h3>
+            <p>En tant qu’accompagnateur, je veux renseigner la personne que j’aide afin de créer des demandes pour elle.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>L’accompagnateur peut saisir le prénom, le quartier et le lien avec le proche.</li>
+              <li>Le parcours indique que la demande est faite pour ce proche.</li>
+              <li>L’accord du proche est explicitement demandé.</li>
+            </ul>
+          </article>
+          <article class="story-card must">
+            <div class="story-head"><span>US-06</span><strong>MUST</strong></div>
+            <h3>Rechercher une aide</h3>
+            <p>En tant que demandeur, je veux filtrer les jeunes disponibles afin de trouver une personne compatible.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>La recherche peut se faire par type de service.</li>
+              <li>La proximité et la disponibilité sont visibles.</li>
+              <li>Chaque résultat affiche un profil lisible et rassurant.</li>
+            </ul>
+          </article>
+          <article class="story-card should">
+            <div class="story-head"><span>US-07</span><strong>SHOULD</strong></div>
+            <h3>Envoyer une demande</h3>
+            <p>En tant que demandeur, je veux envoyer une demande précise afin que le jeune comprenne le besoin.</p>
+            <h4>Critères d’acceptation</h4>
+            <ul>
+              <li>La demande contient le service, la date, l’heure et la fréquence.</li>
+              <li>Un champ permet d’ajouter des précisions.</li>
+              <li>Après envoi, un statut indique que la demande est en attente.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="ux-block detailed-us" id="po-us-detaillees">
+        <p class="eyebrow">Spécifications PO</p>
+        <h2>User stories détaillées</h2>
+        <p>Ces trois fiches reprennent les écrans de la maquette : inscription, connexion et accueil. Pour chaque user story, on voit l’écran concerné, ce que l’utilisateur fait, les règles à valider et ce qui reste hors périmètre pour la V0.</p>
+
+        <article class="us-spec">
+          <div class="us-spec-head">
+            <span>User story 01</span>
+            <strong>En tant que nouvel utilisateur, je veux créer un compte afin d’accéder à GrannyHelp</strong>
+            <em>MUST</em>
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquettes reprises</h3>
+              <div class="us-phone-row">
+                <div class="phone us-preview-phone" data-us-preview="signup" aria-label="Maquette inscription"></div>
+                <div class="phone us-preview-phone" data-us-preview="account" aria-label="Maquette création de compte"></div>
+              </div>
+            </aside>
+          <div class="us-spec-grid">
+            <section>
+              <h3>Contexte</h3>
+              <p>Un nouvel utilisateur arrive sur GrannyHelp depuis l’écran de bienvenue. Il doit pouvoir créer son compte et commencer le parcours adapté à son rôle : jeune volontaire, accompagnateur ou personne âgée.</p>
+            </section>
+            <section>
+              <h3>Écrans concernés</h3>
+              <p>Écrans “Bienvenue”, “Inscription”, “Votre compte” et “Votre quartier” de la maquette interactive.</p>
+            </section>
+            <section>
+              <h3>Parcours principal</h3>
+              <ol>
+                <li>L’utilisateur clique sur “C’est parti”.</li>
+                <li>Il choisit son rôle.</li>
+                <li>Il renseigne prénom, e-mail et mot de passe.</li>
+                <li>Il complète les informations de quartier ou de proche.</li>
+                <li>Il arrive sur l’accueil adapté à son rôle.</li>
+              </ol>
+            </section>
+            <section>
+              <h3>Critères d’acceptation</h3>
+              <ul>
+                <li>Les champs obligatoires empêchent la validation s’ils sont vides.</li>
+                <li>Un format d’e-mail invalide affiche un message clair.</li>
+                <li>Le mot de passe doit respecter la règle minimale définie par Firebase Auth.</li>
+                <li>Le rôle choisi est enregistré et réutilisé pour personnaliser l’accueil.</li>
+                <li>Pour un accompagnateur, le proche peut être renseigné dans la suite du parcours.</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Prérequis</h3>
+              <p>Firebase Auth configuré, modèle utilisateur minimal défini, écrans de la maquette validés pour le parcours d’inscription.</p>
+            </section>
+            <section>
+              <h3>Spécifications techniques</h3>
+              <ul>
+                <li>Créer le compte avec Firebase Auth.</li>
+                <li>Stocker le rôle et les informations de profil dans la base.</li>
+                <li>Prévoir les erreurs : e-mail déjà utilisé, e-mail invalide, mot de passe trop faible.</li>
+                <li>Rediriger vers l’accueil après création du compte.</li>
+              </ul>
+            </section>
+            <section class="us-exclusions">
+              <h3>Exclusions V0</h3>
+              <p>Connexion Google, vérification SMS, documents justificatifs, photo obligatoire et récupération de mot de passe ne sont pas traités dans cette V0.</p>
+            </section>
+          </div>
+          </div>
+        </article>
+
+        <article class="us-spec">
+          <div class="us-spec-head">
+            <span>User story 02</span>
+            <strong>En tant qu’utilisateur inscrit, je veux me connecter afin de retrouver mon espace</strong>
+            <em>MUST</em>
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquette reprise</h3>
+              <div class="phone us-preview-phone" data-us-preview="login" aria-label="Maquette connexion"></div>
+            </aside>
+          <div class="us-spec-grid">
+            <section>
+              <h3>Contexte</h3>
+              <p>Un utilisateur déjà inscrit veut revenir sur GrannyHelp pour retrouver son espace, ses informations et les actions principales liées à son rôle.</p>
+            </section>
+            <section>
+              <h3>Écrans concernés</h3>
+              <p>Écran “Connexion” de la maquette interactive, puis redirection vers l’écran “Accueil”.</p>
+            </section>
+            <section>
+              <h3>Parcours principal</h3>
+              <ol>
+                <li>L’utilisateur clique sur “Se connecter”.</li>
+                <li>Il saisit son e-mail et son mot de passe.</li>
+                <li>Il valide le formulaire.</li>
+                <li>La session est ouverte.</li>
+                <li>L’utilisateur arrive sur son accueil personnalisé.</li>
+              </ol>
+            </section>
+            <section>
+              <h3>Critères d’acceptation</h3>
+              <ul>
+                <li>Un compte existant avec les bons identifiants permet la connexion.</li>
+                <li>Un e-mail inconnu affiche une erreur compréhensible.</li>
+                <li>Un mot de passe incorrect affiche une erreur sans effacer tout le formulaire.</li>
+                <li>Un e-mail au mauvais format bloque l’envoi.</li>
+                <li>Après connexion, l’utilisateur est redirigé vers l’accueil.</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Prérequis</h3>
+              <p>L’utilisateur possède déjà un compte créé dans Firebase Auth. L’écran d’accueil existe pour recevoir la redirection.</p>
+            </section>
+            <section>
+              <h3>Spécifications techniques</h3>
+              <ul>
+                <li>Utiliser Firebase Auth pour vérifier les identifiants.</li>
+                <li>Consommer l’état de session pour maintenir l’utilisateur connecté.</li>
+                <li>Récupérer le profil utilisateur pour afficher le bon rôle.</li>
+                <li>Prévoir une déconnexion simple depuis le profil ou le menu.</li>
+              </ul>
+            </section>
+            <section class="us-exclusions">
+              <h3>Exclusions V0</h3>
+              <p>Lien magique, double authentification, connexion sociale et réinitialisation complète du mot de passe ne sont pas inclus.</p>
+            </section>
+          </div>
+          </div>
+        </article>
+
+        <article class="us-spec">
+          <div class="us-spec-head">
+            <span>User story 03</span>
+            <strong>En tant qu’utilisateur connecté, je veux voir un accueil personnalisé afin d’accéder aux actions utiles</strong>
+            <em>MUST</em>
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquette reprise</h3>
+              <div class="phone us-preview-phone" data-us-preview="home" aria-label="Maquette accueil personnalisé"></div>
+            </aside>
+          <div class="us-spec-grid">
+            <section>
+              <h3>Contexte</h3>
+              <p>Après inscription ou connexion, l’utilisateur doit comprendre immédiatement où il est, pour qui il agit et quelles actions sont disponibles.</p>
+            </section>
+            <section>
+              <h3>Écrans concernés</h3>
+              <p>Écran “Accueil” de la maquette : exemple avec Camille, accompagnatrice de Madeleine, les services et les jeunes disponibles.</p>
+            </section>
+            <section>
+              <h3>Parcours principal</h3>
+              <ol>
+                <li>L’utilisateur arrive sur l’accueil après connexion.</li>
+                <li>Son prénom et son quartier sont affichés.</li>
+                <li>S’il accompagne un proche, le contexte “Pour Madeleine” est visible.</li>
+                <li>Il voit les catégories de services.</li>
+                <li>Il peut accéder aux services, messages et profil via la navigation.</li>
+              </ol>
+            </section>
+            <section>
+              <h3>Critères d’acceptation</h3>
+              <ul>
+                <li>L’accueil affiche les informations de l’utilisateur connecté.</li>
+                <li>Le rôle influence les textes ou les actions principales.</li>
+                <li>Un accompagnateur voit clairement le proche concerné.</li>
+                <li>Les catégories de service sont visibles : courses, ménage, bricolage, informatique.</li>
+                <li>La navigation mobile reste lisible et accessible.</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Prérequis</h3>
+              <p>Le compte, le rôle et les données minimales de profil doivent être disponibles après inscription ou connexion.</p>
+            </section>
+            <section>
+              <h3>Spécifications techniques</h3>
+              <ul>
+                <li>Lire le profil utilisateur depuis la base.</li>
+                <li>Afficher une version de secours si une donnée manque.</li>
+                <li>Prévoir une structure pour brancher ensuite les services et les profils jeunes.</li>
+                <li>Garder le design cohérent avec la charte GrannyHelp.</li>
+              </ul>
+            </section>
+            <section class="us-exclusions">
+              <h3>Exclusions V0</h3>
+              <p>Recherche réelle en base, messagerie complète, réservation, paiement, notation et notifications ne sont pas développés dans cette première version.</p>
+            </section>
+          </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="ux-block" id="po-suite">
+        <p class="eyebrow">06 / Continuer</p>
+        <h2>Suite logique</h2>
+        <article class="brand-card wide-card">
+          <ol class="product-steps">
+            <li>Finaliser le POC inscription et connexion.</li>
+            <li>Enregistrer le rôle utilisateur dans la base.</li>
+            <li>Créer le modèle de données : utilisateurs, proches, demandes, messages et réservations.</li>
+            <li>Relier les écrans de la maquette aux premières fonctionnalités.</li>
+            <li>Préparer une démonstration simple autour du scénario Camille, Madeleine et Lucas.</li>
+          </ol>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="studio-footer">
+    <span>GrannyHelp ↗ La solidarité commence au coin de la rue.</span>
+    <span>Petits services. Grands liens.</span>
+  </footer>
+
+  <script src="app.js?v=real-us-mockups-1"></script>
+</body>
+</html>
