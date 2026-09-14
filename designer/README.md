@@ -12,7 +12,7 @@ Ce dossier regroupe les livrables Designer / UX du projet SOL - GrannyHelp.
 
 - Nom de marque, logo et slogan.
 - Charte graphique : couleurs, typographies, iconographie et ton.
-- Maquettes principales : inscription, connexion et accueil.
+- Maquettes principales : inscription, connexion par code et accueil.
 - Personas, storyboard et user journey map.
 - Value Proposition Canvas avec deux profils de marketplace.
 - Site vitrine : offre, services, tarifs, partenaires, FAQ, témoignages, cadre légal et contact.

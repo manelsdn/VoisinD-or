@@ -4,7 +4,7 @@ Objectif J2 : clarifier les besoins utilisateurs, les hypothèses produit et les
 
 | EPIC | Besoin utilisateur / hypothèse | Approche fonctionnelle retenue | Scénario |
 |---|---|---|---|
-| Compte et authentification | L'utilisateur doit pouvoir créer un compte et revenir facilement dans l'application. | Inscription, connexion, déconnexion, gestion des erreurs et redirection vers l'accueil. | MUST |
+| Compte et authentification | L'utilisateur doit pouvoir créer un accès et revenir facilement dans l'application. | Inscription par e-mail, code temporaire ou lien magique, connexion, déconnexion, gestion des erreurs et redirection vers l'accueil. | MUST |
 | Rôles et profils | L'expérience doit être adaptée aux jeunes volontaires, aux accompagnateurs et aux personnes âgées. | Choix du rôle, profil utilisateur et informations visibles selon le rôle. | MUST |
 | Accueil et navigation | L'utilisateur doit comprendre rapidement quoi faire après sa connexion. | Accueil personnalisé, raccourcis vers les actions principales et navigation mobile simple. | MUST |
 | Accompagnement d'un proche | Un proche peut organiser une aide avec l'accord de la personne âgée. | Fiche proche, contexte "Pour Madeleine" et accord explicite du bénéficiaire. | MUST |

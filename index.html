@@ -6,7 +6,7 @@
   <title>GrannyHelp - Petits services. Grands liens.</title>
   <link rel="icon" type="image/png" href="assets/logo-grannyhelp.png?v=favicon-1">
   <link rel="shortcut icon" type="image/png" href="assets/logo-grannyhelp.png?v=favicon-1">
-  <link rel="stylesheet" href="styles.css?v=restore-mobile-1">
+  <link rel="stylesheet" href="styles.css?v=auth-code-1">
 </head>
 <body>
   <header class="studio-header">
@@ -359,8 +359,8 @@
           <table class="backlog-table">
             <thead><tr><th>EPIC</th><th>User Story</th><th>Périmètre US</th><th>Priorisation US</th></tr></thead>
             <tbody>
-              <tr><th>Compte et authentification</th><td>Créer un compte</td><td>Créer un compte avec e-mail et mot de passe, afficher les erreurs et poursuivre le parcours.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Compte et authentification</th><td>Se connecter</td><td>Saisir ses identifiants, gérer les erreurs et accéder à son espace.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Compte et authentification</th><td>Créer un accès</td><td>Créer un accès avec e-mail, code temporaire ou lien magique, afficher les erreurs et poursuivre le parcours.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><th>Compte et authentification</th><td>Se connecter par code</td><td>Saisir son e-mail, recevoir un code puis accéder à son espace.</td><td><span class="priority-pill must">MUST</span></td></tr>
               <tr><th>Rôles et profils</th><td>Choisir son rôle</td><td>Sélectionner jeune volontaire, accompagnateur ou personne âgée, puis adapter les écrans.</td><td><span class="priority-pill must">MUST</span></td></tr>
               <tr><th>Accueil et navigation</th><td>Afficher un accueil personnalisé</td><td>Afficher les actions principales, le contexte du rôle et les raccourcis utiles.</td><td><span class="priority-pill must">MUST</span></td></tr>
               <tr><th>Accompagnement d’un proche</th><td>Ajouter un proche</td><td>Renseigner prénom, quartier, lien avec le proche et accord pour organiser les demandes.</td><td><span class="priority-pill must">MUST</span></td></tr>
@@ -400,7 +400,7 @@
             <p>En tant qu’utilisateur, je veux créer un compte afin d’accéder à GrannyHelp.</p>
             <h4>Critères d’acceptation</h4>
             <ul>
-              <li>Le formulaire demande au minimum un e-mail et un mot de passe.</li>
+              <li>Le formulaire demande au minimum un e-mail et un code temporaire.</li>
               <li>Un message clair apparaît si les informations sont incorrectes.</li>
               <li>Après inscription, l’utilisateur arrive sur la suite du parcours.</li>
             </ul>
@@ -411,8 +411,8 @@
             <p>En tant qu’utilisateur inscrit, je veux me connecter afin de retrouver mon espace.</p>
             <h4>Critères d’acceptation</h4>
             <ul>
-              <li>L’utilisateur peut saisir son e-mail et son mot de passe.</li>
-              <li>Une erreur est affichée si le compte n’existe pas ou si le mot de passe est faux.</li>
+              <li>L’utilisateur peut saisir son e-mail et un code reçu.</li>
+              <li>Une erreur est affichée si le compte n’existe pas ou si le code est invalide.</li>
               <li>Une fois connecté, il accède à l’accueil de l’application.</li>
             </ul>
           </article>
@@ -507,7 +507,7 @@
               <ol>
                 <li>L’utilisateur clique sur “C’est parti”.</li>
                 <li>Il choisit son rôle.</li>
-                <li>Il renseigne prénom, e-mail et mot de passe.</li>
+                <li>Il renseigne prénom, e-mail et code temporaire reçu.</li>
                 <li>Il complète les informations de quartier ou de proche.</li>
                 <li>Il arrive sur l’accueil adapté à son rôle.</li>
               </ol>
@@ -517,27 +517,27 @@
               <ul>
                 <li>Les champs obligatoires empêchent la validation s’ils sont vides.</li>
                 <li>Un format d’e-mail invalide affiche un message clair.</li>
-                <li>Le mot de passe doit respecter la règle minimale définie par Firebase Auth.</li>
+                <li>Le code ou le lien magique doit être valide et encore actif.</li>
                 <li>Le rôle choisi est enregistré et réutilisé pour personnaliser l’accueil.</li>
                 <li>Pour un accompagnateur, le proche peut être renseigné dans la suite du parcours.</li>
               </ul>
             </section>
             <section>
               <h3>Prérequis</h3>
-              <p>Firebase Auth configuré, modèle utilisateur minimal défini, écrans de la maquette validés pour le parcours d’inscription.</p>
+              <p>Firebase Auth configuré en mode e-mail sans mot de passe, modèle utilisateur minimal défini, écrans de la maquette validés pour le parcours d’inscription.</p>
             </section>
             <section>
               <h3>Spécifications techniques</h3>
               <ul>
-                <li>Créer le compte avec Firebase Auth.</li>
+                <li>Créer l’accès avec Firebase Auth et une connexion sans mot de passe.</li>
                 <li>Stocker le rôle et les informations de profil dans la base.</li>
-                <li>Prévoir les erreurs : e-mail déjà utilisé, e-mail invalide, mot de passe trop faible.</li>
+                <li>Prévoir les erreurs : e-mail déjà utilisé, e-mail invalide, code expiré ou lien invalide.</li>
                 <li>Rediriger vers l’accueil après création du compte.</li>
               </ul>
             </section>
             <section class="us-exclusions">
               <h3>Exclusions V0</h3>
-              <p>Connexion Google, vérification SMS, documents justificatifs, photo obligatoire et récupération de mot de passe ne sont pas traités dans cette V0.</p>
+              <p>Connexion Google, vérification SMS, documents justificatifs, photo obligatoire et double authentification ne sont pas traités dans cette V0.</p>
             </section>
           </div>
           </div>
@@ -546,7 +546,7 @@
         <article class="us-spec">
           <div class="us-spec-head">
             <span>User story 02</span>
-            <strong>En tant qu’utilisateur inscrit, je veux me connecter afin de retrouver mon espace</strong>
+            <strong>En tant qu’utilisateur inscrit, je veux me connecter avec un code afin de retrouver mon espace</strong>
             <em>MUST</em>
           </div>
           <div class="us-spec-body">
@@ -567,7 +567,7 @@
               <h3>Parcours principal</h3>
               <ol>
                 <li>L’utilisateur clique sur “Se connecter”.</li>
-                <li>Il saisit son e-mail et son mot de passe.</li>
+                <li>Il saisit son e-mail et le code reçu.</li>
                 <li>Il valide le formulaire.</li>
                 <li>La session est ouverte.</li>
                 <li>L’utilisateur arrive sur son accueil personnalisé.</li>
@@ -576,21 +576,21 @@
             <section>
               <h3>Critères d’acceptation</h3>
               <ul>
-                <li>Un compte existant avec les bons identifiants permet la connexion.</li>
+                <li>Un compte existant avec un code valide permet la connexion.</li>
                 <li>Un e-mail inconnu affiche une erreur compréhensible.</li>
-                <li>Un mot de passe incorrect affiche une erreur sans effacer tout le formulaire.</li>
+                <li>Un code incorrect ou expiré affiche une erreur sans effacer tout le formulaire.</li>
                 <li>Un e-mail au mauvais format bloque l’envoi.</li>
                 <li>Après connexion, l’utilisateur est redirigé vers l’accueil.</li>
               </ul>
             </section>
             <section>
               <h3>Prérequis</h3>
-              <p>L’utilisateur possède déjà un compte créé dans Firebase Auth. L’écran d’accueil existe pour recevoir la redirection.</p>
+              <p>L’utilisateur possède déjà un compte créé dans Firebase Auth. L’écran d’accueil existe pour recevoir la redirection après validation du code.</p>
             </section>
             <section>
               <h3>Spécifications techniques</h3>
               <ul>
-                <li>Utiliser Firebase Auth pour vérifier les identifiants.</li>
+                <li>Utiliser Firebase Auth pour vérifier le lien magique ou le code temporaire.</li>
                 <li>Consommer l’état de session pour maintenir l’utilisateur connecté.</li>
                 <li>Récupérer le profil utilisateur pour afficher le bon rôle.</li>
                 <li>Prévoir une déconnexion simple depuis le profil ou le menu.</li>
@@ -598,7 +598,7 @@
             </section>
             <section class="us-exclusions">
               <h3>Exclusions V0</h3>
-              <p>Lien magique, double authentification, connexion sociale et réinitialisation complète du mot de passe ne sont pas inclus.</p>
+              <p>Double authentification, connexion sociale, vérification SMS et gestion avancée de récupération de compte ne sont pas incluses.</p>
             </section>
           </div>
           </div>
@@ -687,6 +687,6 @@
     <span>Petits services. Grands liens.</span>
   </footer>
 
-  <script src="app.js?v=restore-mobile-1"></script>
+  <script src="app.js?v=auth-code-1"></script>
 </body>
 </html>

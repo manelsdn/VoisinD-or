@@ -14,7 +14,7 @@ GrannyHelp est un projet de service solidaire de proximité. L'objectif est de m
 
 ## Livrables semaine 1
 
-- Maquette interactive : inscription, connexion, accueil, recherche d'aide et parcours utilisateur.
+- Maquette interactive : inscription, connexion par code, accueil, recherche d'aide et parcours utilisateur.
 - Dossier Designer : charte graphique, personas, storyboard, user journey map et Value Proposition Canvas.
 - Dossier Product Owner : roadmap V0, priorités, user stories et critères d'acceptation.
 - Site vitrine : offre, services, confiance, FAQ et pages à prévoir.

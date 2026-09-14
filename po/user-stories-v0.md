@@ -4,8 +4,8 @@ Ce document présente les premières user stories de la V0. Elles servent à cad
 
 | ID | User story | Priorité | Critère d'acceptation principal |
 |---|---|---|---|
-| US-01 | En tant que nouvel utilisateur, je veux créer un compte afin d'accéder à GrannyHelp. | MUST | Les champs obligatoires sont validés et l'utilisateur arrive dans la suite du parcours. |
-| US-02 | En tant qu'utilisateur inscrit, je veux me connecter afin de retrouver mon espace. | MUST | Un compte valide ouvre l'accueil, une erreur claire apparaît sinon. |
+| US-01 | En tant que nouvel utilisateur, je veux créer un accès avec mon e-mail afin d'accéder à GrannyHelp sans mot de passe. | MUST | Les champs obligatoires sont validés et l'utilisateur peut poursuivre après validation du code ou du lien magique. |
+| US-02 | En tant qu'utilisateur inscrit, je veux me connecter avec un code temporaire afin de retrouver mon espace. | MUST | Un e-mail connu et un code valide ouvrent l'accueil, une erreur claire apparaît sinon. |
 | US-03 | En tant qu'utilisateur, je veux choisir mon rôle afin d'avoir une expérience adaptée. | MUST | Le rôle choisi influence les écrans et les actions proposées. |
 | US-04 | En tant qu'utilisateur connecté, je veux voir un accueil personnalisé afin d'accéder aux actions utiles. | MUST | L'accueil affiche le prénom, le quartier, le rôle et les raccourcis principaux. |
 | US-05 | En tant qu'accompagnateur, je veux ajouter un proche afin de créer des demandes pour lui. | MUST | Le prénom, le quartier, le lien et l'accord du proche sont demandés. |
