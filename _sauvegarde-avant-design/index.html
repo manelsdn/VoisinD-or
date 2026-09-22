@@ -4,24 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voisin d’Or - Petits services. Grands liens.</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo-voisin-dor-icone.svg?v=favicon-3">
-  <link rel="shortcut icon" type="image/svg+xml" href="assets/logo-voisin-dor-icone.svg?v=favicon-3">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-voisin-dor.svg?v=favicon-2">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/logo-voisin-dor.svg?v=favicon-2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Polices hébergées localement dans assets/fonts (voir styles.css) : plus de dépendance à un CDN externe. -->
-  <link rel="stylesheet" href="styles.css?v=form-suggestions-1">
+  <link rel="stylesheet" href="styles.css?v=voisin-dor-moderne-1">
 </head>
 <body>
   <header class="studio-header">
     <a class="studio-brand" href="#accueil" aria-label="Voisin d’Or">
-      <img src="assets/logo-voisin-dor.svg?v=4" alt="Voisin d’Or">
+      <img src="assets/logo-voisin-dor.svg" alt="Voisin d’Or">
     </a>
     <nav aria-label="Dossier de conception">
       <button class="studio-tab active" data-panel="accueil" aria-pressed="true">Accueil</button>
       <button class="studio-tab" data-panel="maquettes" aria-pressed="false">Maquette</button>
-      <button class="studio-tab" data-panel="charte" aria-pressed="false">Charte graphique</button>
+      <button class="studio-tab" data-panel="charte" aria-pressed="false">Design</button>
       <button class="studio-tab" data-panel="parcours" aria-pressed="false">Parcours utilisateurs</button>
-      <button class="studio-tab" data-panel="produit" aria-pressed="false">PO</button>
+      <button class="studio-tab" data-panel="site-vitrine" aria-pressed="false">Site vitrine</button>
+      <button class="studio-tab" data-panel="produit" aria-pressed="false">Produit</button>
     </nav>
   </header>
 
@@ -34,7 +35,7 @@
           <p class="lead">Voisin d’Or rapproche les jeunes, les personnes âgées et leurs accompagnateurs autour de petits services du quotidien : courses, ménage, bricolage, aide informatique et moments de voisinage.</p>
           <div class="actions">
             <button class="home-primary" data-panel="maquettes">Voir la maquette</button>
-            <button class="home-secondary" data-panel="produit">Voir la partie PO</button>
+            <button class="home-secondary" data-panel="produit">Voir le produit</button>
           </div>
         </div>
         <figure class="hero-art">
@@ -56,7 +57,7 @@
 
       <section class="home-band reveal" id="home-services">
         <h2>Nos services</h2>
-        <p class="muted">Les besoins du quotidien, à faire glisser d’un geste - comme dans une vraie application.</p>
+        <p class="muted">Les besoins du quotidien, à faire glisser d’un geste — comme dans une vraie application.</p>
         <div class="service-tiles">
           <article class="service-tile" style="--tile-c:#FFC145">
             <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12.5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L6 8Z M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
@@ -105,11 +106,11 @@
         <p>Le projet a été construit en équipe, avec une répartition claire entre design, produit et développement.</p>
         <div class="team-grid">
           <article>
-            <span>Charte graphique</span>
+            <span>Design</span>
             <strong>Sofiane</strong>
           </article>
           <article>
-            <span>PO</span>
+            <span>Product Owner</span>
             <strong>Manel</strong>
           </article>
           <article>
@@ -145,16 +146,97 @@
       <div id="screens" class="screens"></div>
       <div class="canvas-footer">
         <span><i class="little-dot"></i> Une app pensée pour les jeunes, les aînés et leurs accompagnateurs.</span>
-        <span>01 - PREMIERS PAS</span>
+        <span>01 — PREMIERS PAS</span>
       </div>
     </section>
 
     <section id="charte" class="studio-panel" hidden></section>
     <section id="parcours" class="studio-panel" hidden></section>
 
+    <section id="site-vitrine" class="studio-panel" hidden>
+      <div class="brand-intro">
+        <p class="eyebrow">Designer / Site vitrine</p>
+        <h1>Présenter Voisin d’Or,<br>rassurer et donner envie.</h1>
+        <p>Cette partie complète les attendus UX du site vitrine : offre, fonctionnement, tarifs, partenaires, FAQ, témoignages, cadre légal et appel à l’action.</p>
+      </div>
+
+      <nav class="ux-nav" aria-label="Sections site vitrine">
+        <a href="#vitrine-services">Offre</a>
+        <a href="#vitrine-fonctionnement">Comment ça marche</a>
+        <a href="#vitrine-preuves">Témoignages</a>
+        <a href="#vitrine-faq">FAQ</a>
+        <a href="#vitrine-legal">Cadre légal</a>
+      </nav>
+
+      <section class="ux-block" id="vitrine-services">
+        <p class="eyebrow">01 / Offre</p>
+        <h2>Produits, services et tarifs</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bloc vitrine</th><th>Contenu proposé</th><th>Message clé</th></tr></thead>
+            <tbody>
+              <tr><th>Produit</th><td>Application web mobile de mise en relation locale.</td><td>Une aide simple à trouver, sans installation compliquée.</td></tr>
+              <tr><th>Services</th><td>Courses, ménage léger, bricolage simple, aide informatique, présence de voisinage.</td><td>Des petits services du quotidien, cadrés et compréhensibles.</td></tr>
+              <tr><th>Tarifs</th><td>Aucun paiement obligatoire dans l’application. Pourboire libre, donné directement si la personne le souhaite.</td><td>L’entraide reste accessible et non marchande.</td></tr>
+              <tr><th>Partenaires</th><td>Associations locales, résidences seniors, mairies de quartier, structures étudiantes.</td><td>Le service peut s’appuyer sur des relais de confiance.</td></tr>
+              <tr><th>CTA</th><td>Créer une demande, proposer son aide, contacter l’équipe projet.</td><td>Un visiteur doit comprendre immédiatement quoi faire.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-fonctionnement">
+        <p class="eyebrow">02 / Parcours</p>
+        <h2>Comment ça marche</h2>
+        <div class="story-grid">
+          <article class="story-step"><span class="step-label">ÉTAPE 01</span><h3>On précise le besoin</h3><p>La personne âgée ou son accompagnateur choisit un service, un quartier, une date et quelques détails utiles.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 02</span><h3>On trouve un jeune proche</h3><p>Les profils sont filtrés selon le type de service, la distance et les disponibilités.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 03</span><h3>On confirme ensemble</h3><p>La messagerie sert à valider le créneau, le lieu et le cadre du service avant la rencontre.</p></article>
+          <article class="story-step"><span class="step-label">ÉTAPE 04</span><h3>Le lien continue</h3><p>Le service peut rester ponctuel ou devenir régulier si tout le monde est d’accord.</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-preuves">
+        <p class="eyebrow">03 / Confiance</p>
+        <h2>Témoignages fictifs pour la V0</h2>
+        <div class="persona-grid">
+          <article class="persona"><img class="persona-photo" src="assets/personas/persona-camille-storyboard.png" alt="Portrait de Camille"><h3>Camille</h3><p>“Je peux organiser une aide pour ma grand-mère sans lui retirer sa place dans la décision.”</p></article>
+          <article class="persona"><img class="persona-photo" src="assets/personas/persona-lucas-storyboard.png" alt="Portrait de Lucas"><h3>Lucas</h3><p>“Je vois les besoins proches de chez moi et je choisis ce que je peux vraiment faire.”</p></article>
+          <article class="persona"><img class="persona-photo" src="assets/personas/persona-madeleine-storyboard.png" alt="Portrait de Madeleine"><h3>Madeleine</h3><p>“Je garde mes habitudes, et je rencontre quelqu’un du quartier.”</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-faq">
+        <p class="eyebrow">04 / FAQ</p>
+        <h2>Questions fréquentes</h2>
+        <div class="brand-grid">
+          <article class="brand-card"><h3>La personne âgée doit-elle avoir un smartphone ?</h3><p>Non. Un proche peut créer et suivre une demande avec son accord.</p></article>
+          <article class="brand-card"><h3>Le service est-il payant ?</h3><p>Le pourboire est libre et facultatif. Il ne passe pas par l’application dans la V0.</p></article>
+          <article class="brand-card"><h3>Comment la confiance est-elle expliquée ?</h3><p>La V0 affiche les profils, le service demandé, les règles d’entraide et une messagerie avant la rencontre.</p></article>
+          <article class="brand-card"><h3>Quels services sont prévus au départ ?</h3><p>Courses, ménage léger, bricolage simple et aide informatique.</p></article>
+        </div>
+      </section>
+
+      <section class="ux-block" id="vitrine-legal">
+        <p class="eyebrow">05 / Pages à prévoir</p>
+        <h2>Cadre légal et contact</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Page</th><th>Contenu minimum V0</th><th>Statut</th></tr></thead>
+            <tbody>
+              <tr><th>CGV / règles d’entraide</th><td>Règles de respect, ponctualité, responsabilité et pourboire libre.</td><td>À rédiger proprement avant lancement.</td></tr>
+              <tr><th>Mentions légales</th><td>Nom du projet, responsable, contact, hébergeur.</td><td>À compléter selon l’hébergement choisi.</td></tr>
+              <tr><th>Confidentialité</th><td>Données collectées, finalité, durée de conservation, droits utilisateur.</td><td>À aligner avec Firebase/Firestore.</td></tr>
+              <tr><th>Contact</th><td>Formulaire ou adresse de contact projet.</td><td>À brancher plus tard.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
     <section id="produit" class="studio-panel" hidden>
       <div class="brand-intro">
-        <p class="eyebrow">PO</p>
+        <p class="eyebrow">Produit</p>
         <h1>Une idée claire,<br>un plan simple.</h1>
         <p>Cette partie traduit l’expérience Voisin d’Or en vision produit : pourquoi le service existe, pour qui il est pensé, comment il fonctionne et quelles fonctionnalités sont prioritaires.</p>
       </div>
@@ -240,6 +322,7 @@
             <h3>Canaux</h3>
             <ul>
               <li>Application web mobile.</li>
+              <li>Site vitrine.</li>
               <li>Bouche-à-oreille local.</li>
               <li>Familles, associations et structures d’accompagnement.</li>
             </ul>
@@ -436,14 +519,23 @@
       <section class="ux-block detailed-us" id="po-us-detaillees">
         <p class="eyebrow">Spécifications PO</p>
         <h2>User stories détaillées</h2>
-        <p>Ces trois fiches décrivent les parcours principaux : inscription, connexion et accueil. Pour chaque user story, on précise ce que l’utilisateur fait, les règles à valider et ce qui reste hors périmètre pour la V0.</p>
+        <p>Ces trois fiches reprennent les écrans de la maquette : inscription, connexion et accueil. Pour chaque user story, on voit l’écran concerné, ce que l’utilisateur fait, les règles à valider et ce qui reste hors périmètre pour la V0.</p>
 
         <article class="us-spec">
           <div class="us-spec-head">
             <span>User story 01</span>
             <strong>En tant que nouvel utilisateur, je veux créer un compte afin d’accéder à Voisin d’Or</strong>
             <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquettes reprises</h3>
+              <div class="us-phone-row">
+                <div class="phone us-preview-phone" data-us-preview="signup" aria-label="Maquette inscription"></div>
+                <div class="phone us-preview-phone" data-us-preview="account" aria-label="Maquette création de compte"></div>
+              </div>
+            </aside>
+          <div class="us-spec-grid">
             <section>
               <h3>Contexte</h3>
               <p>Un nouvel utilisateur arrive sur Voisin d’Or depuis l’écran de bienvenue. Il doit pouvoir créer son compte et commencer le parcours adapté à son rôle : jeune volontaire, accompagnateur ou personne âgée.</p>
@@ -457,19 +549,19 @@
               <ol>
                 <li>L’utilisateur clique sur “C’est parti”.</li>
                 <li>Il choisit son rôle.</li>
-                <li>Il renseigne son prénom, son e-mail et son téléphone.</li>
-                <li>Il complète les informations utiles selon son rôle : services et disponibilités pour un jeune, proche et quartier pour un accompagnateur, service recherché pour une personne âgée.</li>
+                <li>Il renseigne son prénom et son e-mail, puis clique sur le lien magique reçu.</li>
+                <li>Il complète les informations de quartier ou de proche.</li>
                 <li>Il arrive sur l’accueil adapté à son rôle.</li>
               </ol>
             </section>
             <section>
               <h3>Critères d’acceptation</h3>
               <ul>
-                <li>Les champs obligatoires empêchent la validation s’ils sont vides : prénom, e-mail, téléphone et informations de rôle.</li>
+                <li>Les champs obligatoires empêchent la validation s’ils sont vides.</li>
                 <li>Un format d’e-mail invalide affiche un message clair.</li>
                 <li>Le lien magique doit être valide et encore actif (15 minutes).</li>
                 <li>Le rôle choisi est enregistré et réutilisé pour personnaliser l’accueil.</li>
-                <li>Pour un accompagnateur, le proche, le lien familial et l’accord du proche sont renseignés.</li>
+                <li>Pour un accompagnateur, le proche peut être renseigné dans la suite du parcours.</li>
               </ul>
             </section>
             <section>
@@ -498,7 +590,13 @@
             <span>User story 02</span>
             <strong>En tant qu’utilisateur inscrit, je veux me connecter avec un lien magique afin de retrouver mon espace</strong>
             <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquette reprise</h3>
+              <div class="phone us-preview-phone" data-us-preview="login" aria-label="Maquette connexion"></div>
+            </aside>
+          <div class="us-spec-grid">
             <section>
               <h3>Contexte</h3>
               <p>Un utilisateur déjà inscrit veut revenir sur Voisin d’Or pour retrouver son espace, ses informations et les actions principales liées à son rôle.</p>
@@ -553,7 +651,13 @@
             <span>User story 03</span>
             <strong>En tant qu’utilisateur connecté, je veux voir un accueil personnalisé afin d’accéder aux actions utiles</strong>
             <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
+          </div>
+          <div class="us-spec-body">
+            <aside class="us-mockup">
+              <h3>Maquette reprise</h3>
+              <div class="phone us-preview-phone" data-us-preview="home" aria-label="Maquette accueil personnalisé"></div>
+            </aside>
+          <div class="us-spec-grid">
             <section>
               <h3>Contexte</h3>
               <p>Après inscription ou connexion, l’utilisateur doit comprendre immédiatement où il est, pour qui il agit et quelles actions sont disponibles.</p>
@@ -606,7 +710,7 @@
 
       <section class="ux-block" id="po-suite">
         <p class="eyebrow">06 / Continuer</p>
-        <h2></h2>
+        <h2>Suite logique</h2>
         <article class="brand-card wide-card">
           <ol class="product-steps">
             <li>Finaliser le POC inscription et connexion.</li>
@@ -621,11 +725,11 @@
   </main>
 
   <footer class="studio-footer">
-    <span>Voisin d’Or - la solidarité commence au coin de la rue.</span>
+    <span>Voisin d’Or — la solidarité commence au coin de la rue.</span>
     <span>Petits services. Grands liens.</span>
   </footer>
 
-  <script src="app.js?v=form-suggestions-1"></script>
+  <script src="app.js?v=camille-petite-fille-1"></script>
   <div id="scroll-progress" aria-hidden="true"></div>
   <script>
     (function(){
@@ -657,6 +761,3 @@
   </script>
 </body>
 </html>
-
-
-

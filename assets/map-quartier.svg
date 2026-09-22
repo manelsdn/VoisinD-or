@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" rx="28" fill="#eef2e9"/>
+  <path d="M0 70c90 44 140-20 236 6s128 44 218 12 112-28 146 0V0H0Z" fill="#cfe8bd" opacity=".7"/>
+  <path d="M0 282c120-36 220 12 350-20s170-45 250-16v94H0Z" fill="#cfe8bd"/>
+  <g stroke="#fff" stroke-width="24" fill="none" stroke-linecap="round"><path d="M0 118h600M0 226h600"/><path d="M310 0v340M450 0v116M450 226v114"/></g>
+  <path d="M168 0v340" stroke="#ffc145" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <g fill="#e3ded2" stroke="#d2cbbb" stroke-width="2"><rect x="30" y="34" width="110" height="62" rx="7"/><rect x="198" y="42" width="118" height="58" rx="7"/><rect x="356" y="40" width="72" height="58" rx="7"/><rect x="500" y="44" width="74" height="58" rx="7"/><rect x="34" y="144" width="118" height="60" rx="7"/><rect x="204" y="146" width="90" height="60" rx="7"/><rect x="348" y="150" width="80" height="56" rx="7"/><rect x="488" y="148" width="86" height="58" rx="7"/></g>
+  <g font-family="Nunito, Arial" font-size="16" font-weight="800" fill="#9a927e"><text x="34" y="216">AV. DU 8 MAI</text><text x="198" y="72" transform="rotate(-90 198 72)">RUE DES ACACIAS</text></g>
+  <g transform="translate(300 290)"><circle r="26" fill="#ff6b5b" opacity=".22"/><circle r="13" fill="#ff6b5b" stroke="#fff" stroke-width="5"/></g>
+  <g fill="#1faf98" stroke="#fff" stroke-width="5"><path d="M300 178c0-28-22-50 0-82 22 32 0 54 0 82Z"/><circle cx="300" cy="96" r="9" fill="#fff"/><path d="M190 112c0-28-22-50 0-82 22 32 0 54 0 82Z"/><circle cx="190" cy="30" r="9" fill="#fff"/><path d="M430 128c0-28-22-50 0-82 22 32 0 54 0 82Z"/><circle cx="430" cy="46" r="9" fill="#fff"/><path d="M470 254c0-28-22-50 0-82 22 32 0 54 0 82Z"/><circle cx="470" cy="172" r="9" fill="#fff"/></g>
+  <rect x="378" y="248" width="180" height="54" rx="27" fill="#fff" opacity=".92"/>
+  <circle cx="406" cy="275" r="9" fill="#ff6b5b"/><text x="424" y="281" font-family="Nunito, Arial" font-size="17" font-weight="800" fill="#2A2140">Vous</text>
+  <circle cx="484" cy="275" r="9" fill="#1faf98"/><text x="502" y="281" font-family="Nunito, Arial" font-size="17" font-weight="800" fill="#2A2140">Jeunes</text>
+</svg>

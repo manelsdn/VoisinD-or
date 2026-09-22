@@ -1,6 +1,6 @@
-# SOL - GrannyHelp
+# SOL - Voisin d’Or
 
-GrannyHelp est un projet de service solidaire de proximité. L'objectif est de mettre en relation des jeunes volontaires, des personnes âgées et, si besoin, un accompagnateur familial autour de petits services du quotidien.
+Voisin d’Or est un projet de service solidaire de proximité. L'objectif est de mettre en relation des jeunes volontaires, des personnes âgées et, si besoin, un accompagnateur familial autour de petits services du quotidien.
 
 ## Structure du dépôt
 
@@ -14,7 +14,7 @@ GrannyHelp est un projet de service solidaire de proximité. L'objectif est de m
 
 ## Livrables semaine 1
 
-- Maquette interactive : inscription, connexion par code, accueil, recherche d'aide et parcours utilisateur.
+- Maquette interactive : inscription, connexion par lien magique, accueil, recherche d'aide et parcours utilisateur.
 - Dossier Designer : charte graphique, personas, storyboard, user journey map et Value Proposition Canvas.
 - Dossier Product Owner : roadmap V0, priorités, user stories et critères d'acceptation.
 - Site vitrine : offre, services, confiance, FAQ et pages à prévoir.

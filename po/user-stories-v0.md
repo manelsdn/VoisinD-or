@@ -1,16 +1,16 @@
-# User Stories V0 - GrannyHelp
+# User Stories V0 - Voisin d’Or
 
 Ce document présente les premières user stories de la V0. Elles servent à cadrer le scénario principal de l'application et à relier les besoins utilisateurs aux maquettes.
 
 | ID | User story | Priorité | Critère d'acceptation principal |
 |---|---|---|---|
-| US-01 | En tant que nouvel utilisateur, je veux créer un accès avec mon e-mail afin d'accéder à GrannyHelp sans mot de passe. | MUST | Les champs obligatoires sont validés et l'utilisateur peut poursuivre après validation du code ou du lien magique. |
-| US-02 | En tant qu'utilisateur inscrit, je veux me connecter avec un code temporaire afin de retrouver mon espace. | MUST | Un e-mail connu et un code valide ouvrent l'accueil, une erreur claire apparaît sinon. |
+| US-01 | En tant que nouvel utilisateur, je veux créer un accès avec mon e-mail afin d'accéder à Voisin d’Or sans mot de passe. | MUST | Les champs obligatoires sont validés et l'utilisateur peut poursuivre après avoir cliqué sur le lien magique reçu. |
+| US-02 | En tant qu'utilisateur inscrit, je veux me connecter avec un lien magique afin de retrouver mon espace. | MUST | Un e-mail connu reçoit un lien valide qui ouvre l'accueil, une erreur claire apparaît sinon. |
 | US-03 | En tant qu'utilisateur, je veux choisir mon rôle afin d'avoir une expérience adaptée. | MUST | Le rôle choisi influence les écrans et les actions proposées. |
 | US-04 | En tant qu'utilisateur connecté, je veux voir un accueil personnalisé afin d'accéder aux actions utiles. | MUST | L'accueil affiche le prénom, le quartier, le rôle et les raccourcis principaux. |
 | US-05 | En tant qu'accompagnateur, je veux ajouter un proche afin de créer des demandes pour lui. | MUST | Le prénom, le quartier, le lien et l'accord du proche sont demandés. |
 | US-06 | En tant que demandeur, je veux rechercher une aide afin de trouver une personne compatible. | MUST | Les résultats affichent le service, la distance et la disponibilité. |
-| US-07 | En tant que demandeur, je veux envoyer une demande précise afin que le jeune comprenne le besoin. | SHOULD | La demande contient le service, la date, l'heure, la fréquence et les précisions. |
+| US-07 | En tant que demandeur, je veux envoyer une demande précise afin que le jeune comprenne le besoin. | SHOULD | La demande contient le service, le créneau proposé par le jeune et les précisions. |
 | US-08 | En tant qu'utilisateur, je veux suivre une demande afin de savoir où elle en est. | SHOULD | Le statut affiche : envoyée, en attente, confirmée ou terminée. |
 | US-09 | En tant qu'utilisateur, je veux échanger avant le service afin de confirmer les détails. | SHOULD | Une conversation simple est accessible depuis la demande. |
 | US-10 | En tant qu'utilisateur, je veux comprendre le pourboire libre afin de ne pas confondre entraide et paiement obligatoire. | COULD | Le message indique que le pourboire est facultatif et se donne directement. |
@@ -24,3 +24,4 @@ Ce document présente les premières user stories de la V0. Elles servent à cad
 | US-18 | En tant qu'utilisateur, je veux modifier mon quartier afin d'obtenir des résultats pertinents. | SHOULD | Le quartier mis à jour est repris dans l'accueil et la recherche. |
 | US-19 | En tant qu'accompagnateur, je veux modifier les informations de mon proche afin de garder les données correctes. | SHOULD | Les informations du proche sont modifiables depuis le profil. |
 | US-20 | En tant qu'utilisateur connecté, je veux me déconnecter afin de fermer ma session. | MUST | La déconnexion ramène à l'écran de bienvenue. |
+| US-21 | En tant qu'utilisateur dont la demande est confirmée, je veux échanger mon numéro de téléphone afin d'officialiser le rendez-vous. | MUST | Le numéro de chacun s'affiche dès que le créneau est confirmé, pas avant. |
