@@ -8,7 +8,6 @@
   <link rel="shortcut icon" type="image/svg+xml" href="assets/logo-voisin-dor-icone.svg?v=favicon-3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Polices hébergées localement dans assets/fonts (voir styles.css) : plus de dépendance à un CDN externe. -->
   <link rel="stylesheet" href="styles.css?v=form-suggestions-1">
 </head>
 <body>
@@ -22,6 +21,7 @@
       <button class="studio-tab" data-panel="charte" aria-pressed="false">Charte graphique</button>
       <button class="studio-tab" data-panel="parcours" aria-pressed="false">Parcours utilisateurs</button>
       <button class="studio-tab" data-panel="produit" aria-pressed="false">PO</button>
+      <button class="studio-tab" data-panel="dev" aria-pressed="false">DEV</button>
     </nav>
   </header>
 
@@ -34,11 +34,11 @@
           <p class="lead">Voisin d’Or rapproche les jeunes, les personnes âgées et leurs accompagnateurs autour de petits services du quotidien : courses, ménage, bricolage, aide informatique et moments de voisinage.</p>
           <div class="actions">
             <button class="home-primary" data-panel="maquettes">Voir la maquette</button>
-            <button class="home-secondary" data-panel="produit">Voir la partie PO</button>
+            <a class="home-secondary" href="landing/index.html" style="text-decoration:none;display:inline-flex;align-items:center">Voir le site vitrine</a>
           </div>
         </div>
         <figure class="hero-art">
-          <video class="hero-video" src="assets/video-presentation-grannyhelp.mp4" autoplay muted loop playsinline controls aria-label="Vidéo de présentation Voisin d’Or"></video>
+          <video class="hero-video" src="assets/video-presentation-voisin-dor.mp4" autoplay muted loop playsinline controls aria-label="Vidéo de présentation Voisin d’Or"></video>
         </figure>
       </div>
 
@@ -105,7 +105,7 @@
         <p>Le projet a été construit en équipe, avec une répartition claire entre design, produit et développement.</p>
         <div class="team-grid">
           <article>
-            <span>Charte graphique</span>
+            <span>Design</span>
             <strong>Sofiane</strong>
           </article>
           <article>
@@ -139,82 +139,84 @@
           <button data-screen="signup" aria-pressed="false">Inscription</button>
           <button data-screen="login" aria-pressed="false">Connexion</button>
           <button data-screen="home" aria-pressed="false">Accueil</button>
+          <button data-screen="setup" aria-pressed="false">Créer une annonce</button>
+          <button data-screen="browse" aria-pressed="false">Recherche</button>
+          <button data-screen="helper" aria-pressed="false">Profil d’un jeune</button>
+          <button data-screen="request" aria-pressed="false">Envoyer une demande</button>
+          <button data-screen="mission" aria-pressed="false">Demande reçue</button>
         </div>
         <span class="prototype-note">Prototype interactif · données fictives</span>
       </div>
       <div id="screens" class="screens"></div>
-      <div class="canvas-footer">
-        <span><i class="little-dot"></i> Une app pensée pour les jeunes, les aînés et leurs accompagnateurs.</span>
-        <span>01 - PREMIERS PAS</span>
-      </div>
+      
     </section>
 
     <section id="charte" class="studio-panel" hidden></section>
     <section id="parcours" class="studio-panel" hidden></section>
-
-    <section id="produit" class="studio-panel" hidden>
-      <div class="brand-intro">
-        <p class="eyebrow">PO</p>
-        <h1>Une idée claire,<br>un plan simple.</h1>
-        <p>Cette partie traduit l’expérience Voisin d’Or en vision produit : pourquoi le service existe, pour qui il est pensé, comment il fonctionne et quelles fonctionnalités sont prioritaires.</p>
-      </div>
-
-      <nav class="ux-nav" aria-label="Sections produit">
-        <a href="#po-vision">Vision</a>
-        <a href="#po-lean">Lean Canvas</a>
-        <a href="#po-modalites">Modalités</a>
-        <a href="#po-roadmap">Roadmap V0</a>
-        <a href="#po-scenarios">Scénarios</a>
-        <a href="#po-stories">User stories</a>
-        <a href="#po-us-detaillees">US détaillées</a>
-        <a href="#po-suite">Suite</a>
-      </nav>
-
-      <section class="ux-block" id="po-vision">
-        <p class="eyebrow">01 / Comprendre</p>
-        <h2>Vision produit</h2>
-        <article class="brand-card wide-card">
-          <p>Voisin d’Or répond à un besoin simple : une personne âgée peut avoir besoin d’un petit coup de main, mais ses proches ne sont pas toujours disponibles. En face, des jeunes souhaitent se rendre utiles, mais ne savent pas toujours où trouver des besoins proches, clairs et compatibles avec leur emploi du temps.</p>
-          <p>Le produit se concentre donc sur une mise en relation locale, simple et rassurante, avec une place importante donnée à l’accompagnateur.</p>
-        </article>
+    <section id="dev" class="studio-panel" hidden>
+      <section class="ux-block">
+        <p class="eyebrow">01 / UML</p>
+        <h2>Modèle de données minimal</h2>
+        <figure class="charter-board">
+          <img src="assets/uml-modele-donnees-prej3.png?v=simple" alt="UML minimal du scénario PréJ3">
+          <figcaption>UML minimal : utilisateurs géolocalisés, proches accompagnés, annonces des jeunes (services et créneaux), demandes et rendez-vous.</figcaption>
+        </figure>
       </section>
 
+      <section class="ux-block">
+        <p class="eyebrow">02 / API</p>
+        <h2>Spécification OpenAPI</h2>
+        <article class="brand-card wide-card">
+          <p>Le fichier YAML décrit les premières routes nécessaires au POC : inscription, proches accompagnés, annonces des jeunes (services et créneaux), recherche par service, distance et disponibilité, demandes et rendez-vous.</p>
+          <div class="actions">
+            <a class="home-primary" href="openapi.yaml" style="text-decoration:none;display:inline-flex;align-items:center">Ouvrir le fichier YAML</a>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section id="produit" class="studio-panel" hidden>
+      
       <section class="ux-block" id="po-lean">
-        <p class="eyebrow">02 / Cadrer</p>
-        <h2>Lean Canvas</h2>
-        <div class="lean-canvas" aria-label="Lean Canvas Voisin d’Or">
-          <article class="lean-card problem">
+        <p class="eyebrow">01 / Lean Canvas</p>
+        <div class="lean-board" aria-label="Lean Canvas Voisin d'Or">
+          <article class="lean-cell lean-problem">
             <span>01</span>
             <h3>Problème</h3>
             <ul>
-              <li>Les personnes âgées ont besoin d’aide pour de petites tâches du quotidien.</li>
+              <li>Les personnes âgées ont besoin d'aide pour de petites tâches du quotidien.</li>
               <li>Les proches ne sont pas toujours disponibles.</li>
               <li>Les jeunes volontaires ne savent pas où proposer leur aide.</li>
             </ul>
             <h4>Alternatives actuelles</h4>
-            <p>Famille, voisins, associations locales, ou absence d’aide.</p>
+            <p>Famille, voisins, associations locales, ou absence d'aide.</p>
           </article>
-          <article class="lean-card solution">
+
+          <article class="lean-cell lean-solution">
             <span>02</span>
             <h3>Solution</h3>
             <ul>
               <li>Mise en relation locale.</li>
+              <li>Les jeunes publient leurs services et leurs créneaux.</li>
               <li>Recherche par service, distance et disponibilité.</li>
-              <li>Demande directe ou par accompagnateur.</li>
+              <li>Demande envoyée à un jeune, directement ou via un accompagnateur.</li>
             </ul>
           </article>
-          <article class="lean-card value">
+
+          <article class="lean-cell lean-value">
             <span>03</span>
             <h3>Proposition de valeur</h3>
-            <strong>Petits services. Grands liens.</strong>
+            <strong>Petits services.<br>Grands liens.</strong>
             <p>Une application simple pour trouver une aide locale, humaine et adaptée.</p>
           </article>
-          <article class="lean-card advantage">
+
+          <article class="lean-cell lean-advantage">
             <span>04</span>
             <h3>Avantage difficile à copier</h3>
             <p>Un parcours pensé dès le départ pour les accompagnateurs et les personnes âgées sans smartphone.</p>
           </article>
-          <article class="lean-card users">
+
+          <article class="lean-cell lean-segments">
             <span>05</span>
             <h3>Segments clients</h3>
             <ul>
@@ -223,9 +225,10 @@
               <li>Jeunes volontaires du quartier.</li>
             </ul>
             <h4>Premiers utilisateurs</h4>
-            <p>Accompagnateurs qui organisent l’aide pour un proche.</p>
+            <p>Accompagnateurs qui organisent l'aide pour un proche.</p>
           </article>
-          <article class="lean-card metrics">
+
+          <article class="lean-cell lean-metrics">
             <span>06</span>
             <h3>Indicateurs clés</h3>
             <ul>
@@ -235,389 +238,131 @@
               <li>Délai pour trouver une aide.</li>
             </ul>
           </article>
-          <article class="lean-card channels">
+
+          <article class="lean-cell lean-channels">
             <span>07</span>
             <h3>Canaux</h3>
             <ul>
               <li>Application web mobile.</li>
               <li>Bouche-à-oreille local.</li>
-              <li>Familles, associations et structures d’accompagnement.</li>
+              <li>Familles, associations et structures d'accompagnement.</li>
             </ul>
           </article>
-          <article class="lean-card costs">
+
+          <article class="lean-cell lean-costs">
             <span>08</span>
             <h3>Coûts</h3>
-            <p>Hébergement, maintenance, modération, communication locale, support utilisateurs et évolution technique.</p>
+            <p> Maintenance, communication locale, support utilisateurs et évolution technique.</p>
           </article>
-          <article class="lean-card revenue">
+
+          <article class="lean-cell lean-revenue">
             <span>09</span>
             <h3>Revenus</h3>
-            <p>Le pourboire reste libre et se fait directement entre le jeune et la personne âgée. Le projet peut aussi être financé par des partenariats avec des associations, des collectivités locales ou des structures d’accompagnement.</p>
+            <p>Partenariats avec des associations, des collectivités locales ou des structures d'accompagnement. (Le pourboire reste libre et se fait directement entre le jeune et la personne âgée.)</p>
           </article>
-        </div>
-
-      </section>
-
-      <section class="ux-block" id="po-modalites">
-        <p class="eyebrow">03 / Fonctionner</p>
-        <h2>Modalités de fonctionnement</h2>
-        <p>Le service ne se limite pas à un seul scénario. Il couvre plusieurs situations proches, tout en gardant une logique simple.</p>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Modalité</th><th>Description</th><th>Exemple</th><th>Priorité</th></tr></thead>
-            <tbody>
-              <tr><th>Demande par accompagnateur</th><td>Un proche crée et suit la demande.</td><td>Camille organise les courses pour Madeleine.</td><td>MUST</td></tr>
-              <tr><th>Demande directe</th><td>La personne âgée utilise elle-même l’application.</td><td>Madeleine demande une aide informatique.</td><td>SHOULD</td></tr>
-              <tr><th>Service ponctuel</th><td>Une aide demandée une seule fois.</td><td>Porter des courses samedi.</td><td>MUST</td></tr>
-              <tr><th>Recherche locale</th><td>Trouver une personne proche.</td><td>Voir les jeunes à moins de 2 km.</td><td>MUST</td></tr>
-              <tr><th>Messagerie</th><td>Se mettre d’accord avant le service.</td><td>Camille précise la liste à Lucas.</td><td>SHOULD</td></tr>
-              <tr><th>Confirmation par téléphone</th><td>Une fois le créneau accepté, les deux personnes échangent leur numéro pour officialiser et régler les derniers détails.</td><td>Camille appelle Lucas pour préciser l’étage et l’interphone.</td><td>MUST</td></tr>
-              <tr><th>Pourboire libre</th><td>Aucun paiement obligatoire dans l’application.</td><td>Madeleine remercie Lucas directement.</td><td>COULD</td></tr>
-            </tbody>
-          </table>
         </div>
       </section>
 
       <section class="ux-block" id="po-roadmap">
-        <p class="eyebrow">04 / Prioriser</p>
-        <h2>Roadmap V0</h2>
-        <p>La roadmap part des EPICs : ce sont les grandes fonctionnalités à construire. Pour chaque EPIC, on relie le besoin utilisateur à une approche fonctionnelle concrète.</p>
-        <div class="table-wrap">
-          <table class="roadmap-table">
-            <thead><tr><th>EPIC</th><th>Vision produit : besoins et hypothèses</th><th>Approche retenue : solutions fonctionnelles</th></tr></thead>
-            <tbody>
-              <tr><th>Compte et authentification</th><td>L’utilisateur doit pouvoir créer un compte et revenir facilement sur l’application.</td><td>Inscription, connexion, déconnexion, gestion des erreurs et redirection vers l’espace utilisateur.</td></tr>
-              <tr><th>Rôles et profils</th><td>Le parcours doit différencier les jeunes volontaires, les accompagnateurs et les personnes âgées.</td><td>Choix du rôle, profil utilisateur, fiche jeune volontaire, informations visibles selon le rôle.</td></tr>
-              <tr><th>Accueil et navigation</th><td>L’utilisateur doit comprendre rapidement quoi faire après son arrivée dans l’application.</td><td>Accueil personnalisé selon le rôle, raccourcis vers les services, navigation mobile simple.</td></tr>
-              <tr><th>Accompagnement d’un proche</th><td>Une personne âgée peut ne pas utiliser l’application elle-même. Un proche doit pouvoir gérer les demandes avec son accord.</td><td>Création d’une fiche proche, affichage du contexte “Pour Madeleine”, mention de l’accord du proche.</td></tr>
-              <tr><th>Services et demandes</th><td>Le besoin doit être clair pour éviter les échanges flous et les malentendus.</td><td>Choix du type de service, description, créneau proposé par le jeune, statut de la demande.</td></tr>
-              <tr><th>Recherche locale</th><td>Les utilisateurs veulent une aide proche, disponible et adaptée au service demandé.</td><td>Filtres par service, proximité, disponibilité, affichage des profils compatibles.</td></tr>
-              <tr><th>Organisation et suivi</th><td>Après l’envoi d’une demande, l’utilisateur doit savoir où en est le service.</td><td>Statuts, suivi de demande, messagerie simple, puis échange de numéro pour officialiser la rencontre.</td></tr>
-              <tr><th>Cadre de confiance</th><td>Le service doit rester humain, rassurant et sans paiement obligatoire.</td><td>Charte d’entraide, rappel du pourboire libre, informations de profil et règles simples.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <section class="ux-block" id="po-scenarios">
-          <p class="eyebrow">04 bis / Arbitrer</p>
-          <h2>Deux scénarios pour la V0</h2>
-          <p>La roadmap peut être lue avec un scénario minimal à démontrer rapidement et un scénario cible à viser si le POC avance bien.</p>
+        <p class="eyebrow">02 / Roadmap V1</p>
+        <h2>Scénario cible</h2>
+        <article class="brand-card wide-card">
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Scénario</th><th>Objectif</th><th>Fonctionnalités incluses</th><th>Ce qui reste hors périmètre</th></tr></thead>
+              <thead><tr><th>Thème</th><th>Besoin / hypothèse</th><th>Approche retenue</th><th>Priorité</th></tr></thead>
               <tbody>
-                <tr><th>Minimal MUST</th><td>Prouver le parcours principal Camille → Madeleine → Lucas.</td><td>Inscription, connexion, choix du rôle, profil accompagnateur, accueil, recherche filtrée, création de demande simulée ou enregistrée.</td><td>Paiement, notation, notifications, géolocalisation avancée, modération complète.</td></tr>
-                <tr><th>Cible SHOULD/COULD</th><td>Rendre le service plus réaliste et démontrable.</td><td>Messagerie, suivi de statut, service régulier, profils enrichis, données fictives nombreuses, réservation plus complète.</td><td>Production sécurisée, gestion juridique complète, app native.</td></tr>
+                <tr><th>🔐 Accès simple</th><td>Les utilisateurs doivent entrer dans l'app sans mot de passe compliqué.</td><td>Inscription courte : prénom, nom, e-mail, téléphone et lien de connexion.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>👥 Rôles</th><td>Les parcours ne sont pas identiques pour Madeleine, Camille et Lucas.</td><td>Choix du rôle dès le début : personne âgée, proche accompagnateur, jeune volontaire.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>🧓 Proche accompagné</th><td>Madeleine n'utilise pas forcément l'app ; Camille agit pour elle, avec son accord.</td><td>Camille ajoute le profil de Madeleine (prénom, adresse) rattaché à son compte. Madeleine n'a pas besoin de compte.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>📍 Profil local</th><td>La recherche a besoin de la position de chacun pour calculer la distance.</td><td>Adresse, code postal et ville, convertis en position (géolocalisation).</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>📢 Annonce du jeune</th><td>Les jeunes doivent dire ce qu'ils proposent et quand.</td><td>Le jeune publie son annonce : services proposés, créneaux de disponibilité et présentation courte.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>🏠 Accueil</th><td>L'utilisateur doit comprendre rapidement quoi faire.</td><td>Accueil adapté au rôle, au quartier et aux actions principales.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>🔎 Recherche</th><td>Camille ou Madeleine doit trouver un jeune proche et disponible.</td><td>Filtres par service, distance et disponibilité ; résultats en liste triés du plus proche au plus éloigné.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>📨 Demande</th><td>Le jeune doit comprendre le besoin avant d'accepter.</td><td>Le demandeur choisit un jeune et un de ses créneaux, puis précise son besoin.</td><td><span class="priority-pill must">MUST</span></td></tr>
+                <tr><th>✅ Confirmation</th><td>Le rendez-vous doit être officialisé sans partager trop tôt les coordonnées.</td><td>Le jeune accepte ou refuse ; le numéro de téléphone est visible une fois la demande acceptée.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+                <tr><th>💬 Messagerie</th><td>Les deux parties veulent régler les détails avant le rendez-vous.</td><td>Conversation simple entre le demandeur et le jeune.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+                <tr><th>🤝 Confiance</th><td>L'entraide doit rester rassurante et non marchande.</td><td>Charte visible, pourboire libre, ton simple et respectueux.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+                <tr><th>📋 Suivi</th><td>Chaque personne doit savoir où en est la demande.</td><td>Statuts : envoyée, acceptée, refusée, annulée, puis rendez-vous confirmé ou terminé.</td><td><span class="priority-pill could">COULD</span></td></tr>
+                <tr><th>🗺️ Carte</th><td>Visualiser les jeunes autour de soi.</td><td>Affichage des résultats sur une carte, prévu après la V1.</td><td><span class="priority-pill could">COULD</span></td></tr>
               </tbody>
             </table>
           </div>
-        </section>
-        <h3 class="subsection-title">Backlog V0 : découpage en user stories</h3>
+        </article>
+      </section>
+
+      <section class="ux-block" id="po-backlog">
+        <p class="eyebrow">03 / Backlog V1</p>
+        <h2>Scénario minimal</h2>
+        <p>Scénario minimal retenu : le jeune publie son annonce ; un demandeur arrive sur l'accueil, cherche un jeune proche et disponible, consulte son profil et lui envoie une demande sur un de ses créneaux ; le jeune accepte.</p>
         <div class="table-wrap">
-          <table class="backlog-table">
-            <thead><tr><th>EPIC</th><th>User Story</th><th>Périmètre US</th><th>Priorisation US</th></tr></thead>
+          <table>
+            <thead><tr><th>EPIC</th><th>Parcours</th><th>User story</th><th>Critère d'acceptation</th><th>Priorité</th></tr></thead>
             <tbody>
-              <tr><th>Compte et authentification</th><td>Créer un accès</td><td>Créer un accès avec e-mail et lien magique, afficher les erreurs et poursuivre le parcours.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Compte et authentification</th><td>Se connecter par lien magique</td><td>Saisir son e-mail, recevoir un lien puis accéder à son espace d’un clic.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Rôles et profils</th><td>Choisir son rôle</td><td>Sélectionner jeune volontaire, accompagnateur ou personne âgée, puis adapter les écrans.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Accueil et navigation</th><td>Afficher un accueil personnalisé</td><td>Afficher les actions principales, le contexte du rôle et les raccourcis utiles.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Accompagnement d’un proche</th><td>Ajouter un proche</td><td>Renseigner prénom, quartier, lien avec le proche et accord pour organiser les demandes.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Recherche locale</th><td>Rechercher une aide</td><td>Filtrer les profils par service, distance et disponibilité.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Services et demandes</th><td>Envoyer une demande</td><td>Créer une demande avec service, créneau proposé par le jeune et précisions.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Organisation et suivi</th><td>Suivre une demande</td><td>Afficher le statut : envoyée, en attente, confirmée ou terminée.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Organisation et suivi</th><td>Échanger avant le service</td><td>Prévoir une conversation simple, puis un échange de numéro pour officialiser les détails de la rencontre.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Organisation et suivi</th><td>Échanger un numéro de téléphone</td><td>Une fois le créneau confirmé, afficher le numéro de chacun pour officialiser le rendez-vous.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Cadre de confiance</th><td>Comprendre le pourboire libre</td><td>Afficher que le pourboire est facultatif et se fait directement entre les personnes.</td><td><span class="priority-pill could">COULD</span></td></tr>
-              <tr><th>Services et demandes</th><td>Voir le détail d’un profil jeune</td><td>Afficher prénom, distance, services proposés, disponibilité et présentation courte.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Services et demandes</th><td>Voir le détail d’une demande</td><td>Afficher le service, le bénéficiaire, le créneau proposé par le jeune et les précisions.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Recherche locale</th><td>Filtrer par distance</td><td>Limiter les résultats à 500 m, 1 km ou 2 km.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Recherche locale</th><td>Filtrer par disponibilité</td><td>Afficher les profils disponibles aujourd’hui, demain ou ce week-end.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Organisation et suivi</th><td>Confirmer un créneau</td><td>Permettre au jeune et au demandeur de valider un horaire commun.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Organisation et suivi</th><td>Annuler une demande</td><td>Permettre d’annuler avant confirmation avec un message clair.</td><td><span class="priority-pill could">COULD</span></td></tr>
-              <tr><th>Cadre de confiance</th><td>Lire la charte d’entraide</td><td>Afficher les règles de respect, accord du proche et pourboire libre.</td><td><span class="priority-pill must">MUST</span></td></tr>
-              <tr><th>Profil et préférences</th><td>Modifier son quartier</td><td>Mettre à jour le quartier utilisé pour la recherche locale.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Profil et préférences</th><td>Modifier les informations du proche</td><td>Corriger prénom, quartier et lien avec le proche accompagné.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
-              <tr><th>Authentification</th><td>Se déconnecter</td><td>Fermer la session et revenir à l’écran de bienvenue.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Accès</td><th>🔐 Inscription</th><td>En tant qu'utilisateur, je veux créer mon compte avec prénom, nom, e-mail et téléphone afin d'accéder à l'app.</td><td>Le compte n'est pas créé sans ces 4 champs ; le téléphone reste privé.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Accès</td><th>🔐 Connexion</th><td>En tant qu'utilisateur, je veux recevoir un lien de connexion afin de me connecter sans mot de passe.</td><td>Le lien est envoyé à l'e-mail saisi et ouvre l'accueil.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Accès</td><th>👥 Rôle</th><td>En tant qu'utilisateur, je veux choisir mon rôle afin d'avoir un parcours adapté.</td><td>Trois rôles possibles : personne âgée, proche accompagnateur, jeune volontaire.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Profil</td><th>🧓 Proche</th><td>En tant que proche, je veux ajouter le profil de la personne que j'accompagne afin d'organiser ses demandes.</td><td>Prénom et adresse du proche obligatoires ; case d'accord du proche cochée.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Profil</td><th>📍 Localisation</th><td>En tant qu'utilisateur, je veux renseigner mon adresse afin de trouver de l'aide près de chez moi.</td><td>L'adresse est convertie en position ; la ville est affichée sur l'accueil.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Annonce</td><th>📢 Publier</th><td>En tant que jeune, je veux publier une annonce avec mes services et une présentation afin d'être trouvé.</td><td>Au moins un service obligatoire ; l'annonce apparaît dans les résultats de recherche.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Annonce</td><th>🕒 Créneaux</th><td>En tant que jeune, je veux ajouter mes créneaux de disponibilité afin que l'on sache quand je peux aider.</td><td>Chaque créneau a un jour, une heure de début et une heure de fin.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Accueil</td><th>🏠 Contexte</th><td>En tant qu'utilisateur, je veux voir mon rôle et mon quartier afin de comprendre le contexte.</td><td>Le rôle, la ville et le quartier sont visibles sur l'écran d'accueil.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Accueil</td><th>🏠 Pour Madeleine</th><td>En tant que proche, je veux voir le prénom du bénéficiaire afin de savoir pour qui j'agis.</td><td>Le bloc « Pour Madeleine » est affiché pour l'accompagnateur.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Recherche</td><th>🔎 Filtrer</th><td>En tant que demandeur, je veux filtrer les jeunes par service, distance et disponibilité afin de trouver une aide proche.</td><td>Les résultats s'affichent en liste, triés par distance calculée depuis ma position.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Recherche</td><th>🔎 Profil</th><td>En tant que demandeur, je veux consulter le profil d'un jeune afin de choisir en confiance.</td><td>Le profil montre prénom, âge, photo, services, distance et créneaux ; pas de téléphone.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><td>Demande</td><th>📨 Envoyer</th><td>En tant que demandeur, je veux envoyer une demande à un jeune en choisissant un de ses créneaux afin qu'il comprenne mon besoin.</td><td>La demande ne part pas sans jeune, service, créneau et précisions ; pour un proche, le bénéficiaire est pré-rempli.</td><td><span class="priority-pill must">MUST</span></td></tr>
+              <tr><td>Demande</td><th>📨 Lire</th><td>En tant que jeune, je veux lire les demandes reçues afin de savoir si je peux aider.</td><td>Le service, le bénéficiaire, la distance, le créneau et les précisions sont visibles.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><td>Confirmation</td><th>✅ Accepter</th><td>En tant que jeune, je veux accepter ou refuser une demande afin de confirmer que je m'en occupe.</td><td>La demande passe de « envoyée » à « acceptée » ou « refusée » ; si acceptée, le rendez-vous est créé.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><td>Confirmation</td><th>✅ Numéro</th><td>En tant que demandeur, je veux voir le numéro du jeune une fois la demande acceptée afin de régler les détails.</td><td>Le numéro reste masqué tant que la demande est « envoyée ».</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><td>Échange</td><th>💬 Messagerie</th><td>En tant que demandeur ou jeune, je veux échanger des messages afin de préciser le service.</td><td>Un message envoyé apparaît dans la conversation.</td><td><span class="priority-pill should">SHOULD</span></td></tr>
+              <tr><td>Suivi</td><th>📋 Mes services</th><td>En tant qu'utilisateur, je veux voir mes demandes et leur statut afin de suivre l'organisation.</td><td>Chaque demande affiche son statut : envoyée, acceptée, refusée ou annulée.</td><td><span class="priority-pill could">COULD</span></td></tr>
+              <tr><td>Recherche</td><th>🗺️ Carte</th><td>En tant que demandeur, je veux voir les jeunes sur une carte afin de repérer les plus proches.</td><td>Prévu après la V1.</td><td><span class="priority-pill could">COULD</span></td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="ux-block" id="po-stories">
-        <p class="eyebrow">05 / Écrire</p>
-        <h2>Premières user stories</h2>
-        <p>Ces user stories servent de base pour transformer la maquette en fonctionnalités. Elles sont volontairement courtes, priorisées et testables.</p>
-        <div class="priority-legend" aria-label="Légende des priorités MoSCoW">
-          <span><i class="must-dot"></i><strong>MUST</strong> indispensable pour la V0</span>
-          <span><i class="should-dot"></i><strong>SHOULD</strong> important après le cœur du parcours</span>
-          <span><i class="could-dot"></i><strong>COULD</strong> bonus si le temps le permet</span>
-        </div>
-        <div class="story-backlog">
-          <article class="story-card must">
-            <div class="story-head"><span>US-01</span><strong>MUST</strong></div>
-            <h3>Créer un compte</h3>
-            <p>En tant qu’utilisateur, je veux créer un compte afin d’accéder à Voisin d’Or.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>Le formulaire demande au minimum un prénom et un e-mail, pour recevoir un lien magique.</li>
-              <li>Un message clair apparaît si les informations sont incorrectes.</li>
-              <li>Après inscription, l’utilisateur arrive sur la suite du parcours.</li>
-            </ul>
+      <section class="ux-block" id="po-focus">
+        <p class="eyebrow">04 / User stories</p>
+        <h2>Accueil, recherche, création d'une annonce</h2>
+        <div class="story-grid">
+          <article class="story-step">
+            <span class="step-label">🏠 Accueil - MUST</span>
+            <h3>Voir un accueil clair</h3>
+            <p><strong>User story :</strong> en tant qu'utilisateur, je veux voir mon rôle, mon quartier et les actions utiles afin de savoir quoi faire.</p>
+            <p><strong>Contexte :</strong> l'utilisateur arrive après connexion.</p>
+            <p><strong>Parcours :</strong> il voit son rôle, son quartier, les services et les jeunes proches (ou les demandes proches s'il est jeune).</p>
+            <p><strong>Critères :</strong> rôle visible, ville/quartier visibles, bloc « Pour Madeleine » pour le proche, services visibles, navigation lisible.</p>
+            <p><strong>Exclusion :</strong> pas de personnalisation avancée.</p>
           </article>
-          <article class="story-card must">
-            <div class="story-head"><span>US-02</span><strong>MUST</strong></div>
-            <h3>Se connecter</h3>
-            <p>En tant qu’utilisateur inscrit, je veux me connecter afin de retrouver mon espace.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>L’utilisateur peut saisir son e-mail pour recevoir un lien magique.</li>
-              <li>Une erreur est affichée si le compte n’existe pas ou si le lien est expiré.</li>
-              <li>Une fois connecté, il accède à l’accueil de l’application.</li>
-            </ul>
+          <article class="story-step">
+            <span class="step-label">🔎 Recherche - MUST</span>
+            <h3>Trouver un jeune proche</h3>
+            <p><strong>User story :</strong> en tant que demandeur, je veux filtrer les jeunes par service, distance et disponibilité afin de trouver une aide proche.</p>
+            <p><strong>Contexte :</strong> Camille ou Madeleine cherche un jeune disponible.</p>
+            <p><strong>Parcours :</strong> choix du service, du rayon et du moment, puis consultation d'un profil.</p>
+            <p><strong>Critères :</strong> liste de profils avec photo, services, distance calculée depuis la position du demandeur et créneaux ; tri du plus proche au plus éloigné.</p>
+            <p><strong>Exclusion :</strong> pas d'affichage carte en V1, pas de suivi GPS en temps réel.</p>
           </article>
-          <article class="story-card must">
-            <div class="story-head"><span>US-03</span><strong>MUST</strong></div>
-            <h3>Choisir son rôle</h3>
-            <p>En tant qu’utilisateur, je veux choisir mon rôle afin d’avoir une expérience adaptée.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>Les rôles disponibles sont : jeune volontaire, accompagnateur, personne âgée.</li>
-              <li>Le rôle choisi est visible dans le parcours.</li>
-              <li>Le contenu affiché change selon le rôle sélectionné.</li>
-            </ul>
+          <article class="story-step">
+            <span class="step-label">📢 Annonce - MUST</span>
+            <h3>Créer une annonce</h3>
+            <p><strong>User story :</strong> en tant que jeune, je veux publier une annonce avec mes services et mes créneaux afin d'être trouvé par les personnes du quartier.</p>
+            <p><strong>Contexte :</strong> Lucas veut rendre service pendant ses temps libres.</p>
+            <p><strong>Parcours :</strong> services proposés, créneaux de disponibilité, présentation courte, publication.</p>
+            <p><strong>Critères :</strong> impossible de publier sans au moins un service et un créneau ; l'annonce apparaît dans la recherche et dans le fil.</p>
+            <p><strong>Exclusion :</strong> pas de gestion avancée des rendez-vous.</p>
           </article>
-          <article class="story-card must">
-            <div class="story-head"><span>US-04</span><strong>MUST</strong></div>
-            <h3>Afficher un accueil personnalisé</h3>
-            <p>En tant qu’utilisateur connecté, je veux voir un accueil adapté à mon rôle afin d’accéder rapidement aux actions utiles.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>L’accueil affiche le prénom de l’utilisateur et son contexte.</li>
-              <li>Un accompagnateur voit clairement pour quel proche il agit.</li>
-              <li>Les raccourcis principaux sont visibles : services, demandes, messages et profil.</li>
-            </ul>
-          </article>
-          <article class="story-card must">
-            <div class="story-head"><span>US-05</span><strong>MUST</strong></div>
-            <h3>Ajouter un proche</h3>
-            <p>En tant qu’accompagnateur, je veux renseigner la personne que j’aide afin de créer des demandes pour elle.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>L’accompagnateur peut saisir le prénom, le quartier et le lien avec le proche.</li>
-              <li>Le parcours indique que la demande est faite pour ce proche.</li>
-              <li>L’accord du proche est explicitement demandé.</li>
-            </ul>
-          </article>
-          <article class="story-card must">
-            <div class="story-head"><span>US-06</span><strong>MUST</strong></div>
-            <h3>Rechercher une aide</h3>
-            <p>En tant que demandeur, je veux filtrer les jeunes disponibles afin de trouver une personne compatible.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>La recherche peut se faire par type de service.</li>
-              <li>La proximité et la disponibilité sont visibles.</li>
-              <li>Chaque résultat affiche un profil lisible et rassurant.</li>
-            </ul>
-          </article>
-          <article class="story-card should">
-            <div class="story-head"><span>US-07</span><strong>SHOULD</strong></div>
-            <h3>Envoyer une demande</h3>
-            <p>En tant que demandeur, je veux envoyer une demande précise afin que le jeune comprenne le besoin.</p>
-            <h4>Critères d’acceptation</h4>
-            <ul>
-              <li>La demande contient le service et le créneau choisi parmi ceux proposés par le jeune.</li>
-              <li>Un champ permet d’ajouter des précisions.</li>
-              <li>Après envoi, un statut indique que la demande est en attente.</li>
-              <li>Une fois la demande confirmée, les numéros de téléphone sont échangés pour officialiser.</li>
-            </ul>
+          <article class="story-step">
+            <span class="step-label">📨 Demande - MUST</span>
+            <h3>Envoyer une demande à un jeune</h3>
+            <p><strong>User story :</strong> en tant que demandeur, je veux envoyer une demande à un jeune en choisissant un de ses créneaux afin qu'il comprenne mon besoin.</p>
+            <p><strong>Contexte :</strong> Camille a trouvé Lucas pour les courses de Madeleine.</p>
+            <p><strong>Parcours :</strong> profil du jeune, service, créneau proposé par le jeune, précisions, envoi.</p>
+            <p><strong>Critères :</strong> impossible d'envoyer sans jeune, service, créneau et précisions ; bénéficiaire pré-rempli pour le proche ; numéro masqué tant que la demande n'est pas acceptée.</p>
+            <p><strong>Exclusion :</strong> pas de demande envoyée à plusieurs jeunes à la fois.</p>
           </article>
         </div>
-      </section>
-
-      <section class="ux-block detailed-us" id="po-us-detaillees">
-        <p class="eyebrow">Spécifications PO</p>
-        <h2>User stories détaillées</h2>
-        <p>Ces trois fiches décrivent les parcours principaux : inscription, connexion et accueil. Pour chaque user story, on précise ce que l’utilisateur fait, les règles à valider et ce qui reste hors périmètre pour la V0.</p>
-
-        <article class="us-spec">
-          <div class="us-spec-head">
-            <span>User story 01</span>
-            <strong>En tant que nouvel utilisateur, je veux créer un compte afin d’accéder à Voisin d’Or</strong>
-            <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
-            <section>
-              <h3>Contexte</h3>
-              <p>Un nouvel utilisateur arrive sur Voisin d’Or depuis l’écran de bienvenue. Il doit pouvoir créer son compte et commencer le parcours adapté à son rôle : jeune volontaire, accompagnateur ou personne âgée.</p>
-            </section>
-            <section>
-              <h3>Écrans concernés</h3>
-              <p>Écrans “Bienvenue”, “Inscription”, “Votre compte” et “Votre quartier” de la maquette interactive.</p>
-            </section>
-            <section>
-              <h3>Parcours principal</h3>
-              <ol>
-                <li>L’utilisateur clique sur “C’est parti”.</li>
-                <li>Il choisit son rôle.</li>
-                <li>Il renseigne son prénom, son e-mail et son téléphone.</li>
-                <li>Il complète les informations utiles selon son rôle : services et disponibilités pour un jeune, proche et quartier pour un accompagnateur, service recherché pour une personne âgée.</li>
-                <li>Il arrive sur l’accueil adapté à son rôle.</li>
-              </ol>
-            </section>
-            <section>
-              <h3>Critères d’acceptation</h3>
-              <ul>
-                <li>Les champs obligatoires empêchent la validation s’ils sont vides : prénom, e-mail, téléphone et informations de rôle.</li>
-                <li>Un format d’e-mail invalide affiche un message clair.</li>
-                <li>Le lien magique doit être valide et encore actif (15 minutes).</li>
-                <li>Le rôle choisi est enregistré et réutilisé pour personnaliser l’accueil.</li>
-                <li>Pour un accompagnateur, le proche, le lien familial et l’accord du proche sont renseignés.</li>
-              </ul>
-            </section>
-            <section>
-              <h3>Prérequis</h3>
-              <p>Firebase Auth configuré en mode e-mail sans mot de passe, modèle utilisateur minimal défini, écrans de la maquette validés pour le parcours d’inscription.</p>
-            </section>
-            <section>
-              <h3>Spécifications techniques</h3>
-              <ul>
-                <li>Créer l’accès avec Firebase Auth et une connexion sans mot de passe.</li>
-                <li>Stocker le rôle et les informations de profil dans la base.</li>
-                <li>Prévoir les erreurs : e-mail déjà utilisé, e-mail invalide, ou lien magique expiré.</li>
-                <li>Rediriger vers l’accueil après création du compte.</li>
-              </ul>
-            </section>
-            <section class="us-exclusions">
-              <h3>Exclusions V0</h3>
-              <p>Connexion Google, vérification SMS, documents justificatifs, photo obligatoire et double authentification ne sont pas traités dans cette V0.</p>
-            </section>
-          </div>
-          </div>
-        </article>
-
-        <article class="us-spec">
-          <div class="us-spec-head">
-            <span>User story 02</span>
-            <strong>En tant qu’utilisateur inscrit, je veux me connecter avec un lien magique afin de retrouver mon espace</strong>
-            <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
-            <section>
-              <h3>Contexte</h3>
-              <p>Un utilisateur déjà inscrit veut revenir sur Voisin d’Or pour retrouver son espace, ses informations et les actions principales liées à son rôle.</p>
-            </section>
-            <section>
-              <h3>Écrans concernés</h3>
-              <p>Écran “Connexion” de la maquette interactive, puis redirection vers l’écran “Accueil”.</p>
-            </section>
-            <section>
-              <h3>Parcours principal</h3>
-              <ol>
-                <li>L’utilisateur clique sur “Se connecter”.</li>
-                <li>Il saisit son e-mail et reçoit un lien magique.</li>
-                <li>Il clique sur le lien reçu.</li>
-                <li>La session est ouverte.</li>
-                <li>L’utilisateur arrive sur son accueil personnalisé.</li>
-              </ol>
-            </section>
-            <section>
-              <h3>Critères d’acceptation</h3>
-              <ul>
-                <li>Un compte existant reçoit un lien magique valide qui permet la connexion.</li>
-                <li>Un e-mail inconnu affiche une erreur compréhensible.</li>
-                <li>Un lien expiré affiche une erreur claire et propose d’en renvoyer un.</li>
-                <li>Un e-mail au mauvais format bloque l’envoi.</li>
-                <li>Après connexion, l’utilisateur est redirigé vers l’accueil.</li>
-              </ul>
-            </section>
-            <section>
-              <h3>Prérequis</h3>
-              <p>L’utilisateur possède déjà un compte créé dans Firebase Auth. L’écran d’accueil existe pour recevoir la redirection après validation du lien.</p>
-            </section>
-            <section>
-              <h3>Spécifications techniques</h3>
-              <ul>
-                <li>Utiliser Firebase Auth pour générer et vérifier le lien magique par e-mail.</li>
-                <li>Consommer l’état de session pour maintenir l’utilisateur connecté.</li>
-                <li>Récupérer le profil utilisateur pour afficher le bon rôle.</li>
-                <li>Prévoir une déconnexion simple depuis le profil ou le menu.</li>
-              </ul>
-            </section>
-            <section class="us-exclusions">
-              <h3>Exclusions V0</h3>
-              <p>Double authentification, connexion sociale, vérification SMS et gestion avancée de récupération de compte ne sont pas incluses.</p>
-            </section>
-          </div>
-          </div>
-        </article>
-
-        <article class="us-spec">
-          <div class="us-spec-head">
-            <span>User story 03</span>
-            <strong>En tant qu’utilisateur connecté, je veux voir un accueil personnalisé afin d’accéder aux actions utiles</strong>
-            <em>MUST</em>
-          </div><div class="us-spec-body"><div class="us-spec-grid">
-            <section>
-              <h3>Contexte</h3>
-              <p>Après inscription ou connexion, l’utilisateur doit comprendre immédiatement où il est, pour qui il agit et quelles actions sont disponibles.</p>
-            </section>
-            <section>
-              <h3>Écrans concernés</h3>
-              <p>Écran “Accueil” de la maquette : exemple avec Camille, accompagnatrice de Madeleine, les services et les jeunes disponibles.</p>
-            </section>
-            <section>
-              <h3>Parcours principal</h3>
-              <ol>
-                <li>L’utilisateur arrive sur l’accueil après connexion.</li>
-                <li>Son prénom et son quartier sont affichés.</li>
-                <li>S’il accompagne un proche, le contexte “Pour Madeleine” est visible.</li>
-                <li>Il voit les catégories de services.</li>
-                <li>Il peut accéder aux services, messages et profil via la navigation.</li>
-              </ol>
-            </section>
-            <section>
-              <h3>Critères d’acceptation</h3>
-              <ul>
-                <li>L’accueil affiche les informations de l’utilisateur connecté.</li>
-                <li>Le rôle influence les textes ou les actions principales.</li>
-                <li>Un accompagnateur voit clairement le proche concerné.</li>
-                <li>Les catégories de service sont visibles : courses, ménage, bricolage, informatique.</li>
-                <li>La navigation mobile reste lisible et accessible.</li>
-              </ul>
-            </section>
-            <section>
-              <h3>Prérequis</h3>
-              <p>Le compte, le rôle et les données minimales de profil doivent être disponibles après inscription ou connexion.</p>
-            </section>
-            <section>
-              <h3>Spécifications techniques</h3>
-              <ul>
-                <li>Lire le profil utilisateur depuis la base.</li>
-                <li>Afficher une version de secours si une donnée manque.</li>
-                <li>Prévoir une structure pour brancher ensuite les services et les profils jeunes.</li>
-                <li>Garder le design cohérent avec la charte Voisin d’Or.</li>
-              </ul>
-            </section>
-            <section class="us-exclusions">
-              <h3>Exclusions V0</h3>
-              <p>Recherche réelle en base, messagerie complète, réservation, paiement, notation et notifications ne sont pas développés dans cette première version.</p>
-            </section>
-          </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="ux-block" id="po-suite">
-        <p class="eyebrow">06 / Continuer</p>
-        <h2></h2>
-        <article class="brand-card wide-card">
-          <ol class="product-steps">
-            <li>Finaliser le POC inscription et connexion.</li>
-            <li>Enregistrer le rôle utilisateur dans la base.</li>
-            <li>Créer le modèle de données : utilisateurs, proches, demandes, messages et réservations.</li>
-            <li>Relier les écrans de la maquette aux premières fonctionnalités.</li>
-            <li>Préparer une démonstration simple autour du scénario Camille, Madeleine et Lucas.</li>
-          </ol>
-        </article>
-      </section>
-    </section>
+      </section></section>
   </main>
 
   <footer class="studio-footer">
@@ -657,6 +402,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

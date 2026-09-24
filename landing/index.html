@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voisin d’Or - Site vitrine</title>
+  <meta name="description" content="Voisin d’Or rapproche les jeunes, les personnes âgées et leurs accompagnateurs autour de petits services du quotidien.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-voisin-dor-icone.svg?v=favicon-3">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/logo-voisin-dor-icone.svg?v=favicon-3">
+  <!-- Polices hébergées localement dans assets/fonts (voir styles.css) : pas de dépendance à un CDN externe. -->
+  <link rel="stylesheet" href="styles.css?v=form-suggestions-1">
+  <style>
+    /* Styles propres au site vitrine (n'affectent pas la maquette / le dossier de conception) */
+    .sv-header{position:sticky;top:0;background:var(--paper);z-index:20}
+    .sv-header-cta{text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap;flex-shrink:0}
+    .sv-header nav a.studio-tab{text-decoration:none}
+    .tarifs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .steps-grid .product-step{position:relative;padding-top:30px}
+    .steps-grid .step-num{position:absolute;top:-14px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-items:center;font:600 15px var(--font-head)}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+    .testi-card{background:var(--white);border-top:3px solid #1faf98;border-radius:0 0 17px 17px;padding:23px}
+    .testi-card:nth-child(2){border-color:#9b6bff}
+    .testi-card:nth-child(3){border-color:#ffc145}
+    .testi-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+    .testi-head img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+    .testi-head strong{display:block;font-size:13px}
+    .testi-head span{font-size:11px;color:var(--muted)}
+    .testi-card blockquote{font:italic 17px/1.55 var(--font-head);margin:0;color:var(--ink)}
+    .principle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:10px}
+    .faq-list{display:grid;gap:12px;margin-top:22px}
+    .faq-item{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:6px 22px}
+    .faq-item summary{cursor:pointer;list-style:none;padding:16px 0;font:600 15px var(--font-head);display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary:after{content:'+';font-size:20px;color:#8a7ba8;flex-shrink:0}
+    .faq-item[open] summary:after{content:'–'}
+    .faq-item p{margin:0 0 18px;font-size:13px;line-height:1.8;color:var(--muted)}
+    .cta-band{background:var(--yellow-soft);border-radius:28px;padding:48px 40px;text-align:center;margin:34px 0}
+    .cta-band h2{margin:0 0 10px}
+    .cta-band p{max-width:560px;margin:0 auto 22px;color:var(--muted);font-size:15px;line-height:1.7}
+    .cta-band-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .cta-mail{font-size:12px;color:var(--muted);margin-top:14px}
+    .legal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .legal-grid article{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}
+    .legal-grid h3{font:600 15px var(--font-head);margin:0 0 10px}
+    .legal-grid p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+    .legal-note{font-size:11px;color:var(--muted);margin-top:14px}
+    @media(max-width:900px){.steps-grid,.testi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.legal-grid,.principle-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.steps-grid,.testi-grid,.tarifs-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="studio-header sv-header">
+    <a class="studio-brand" href="#top" aria-label="Voisin d’Or">
+      <img src="assets/logo-voisin-dor.svg?v=4" alt="Voisin d’Or">
+    </a>
+    <nav aria-label="Site vitrine">
+      <a class="studio-tab" href="#comment-ca-marche">Comment ça marche</a>
+      <a class="studio-tab" href="#services">Services</a>
+      <a class="studio-tab" href="#confiance">Confiance</a>
+      <a class="studio-tab" href="#temoignages">Témoignages</a>
+      <a class="studio-tab" href="#tarifs">Tarifs</a>
+      <a class="studio-tab" href="#faq">FAQ</a>
+      <a class="studio-tab" href="#contact">Contact</a>
+    </nav>
+    <a class="home-secondary sv-header-cta" href="index.html#accueil">Dossier de conception</a>
+  </header>
+
+  <main id="top">
+    <section class="studio-panel">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">VOISIN D’OR</p>
+          <h1>Petits services.<br><em>Grands liens.</em></h1>
+          <p class="lead">Voisin d’Or rapproche les jeunes, les personnes âgées et leurs accompagnateurs autour de petits services du quotidien : courses, ménage, bricolage, aide informatique et moments de voisinage.</p>
+          <div class="actions">
+            <a class="home-primary" href="#comment-ca-marche" style="text-decoration:none;display:inline-flex;align-items:center">Comment ça marche</a>
+            <a class="home-secondary" href="#contact" style="text-decoration:none;display:inline-flex;align-items:center">Nous contacter</a>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <video class="hero-video" src="assets/video-presentation-voisin-dor.mp4" autoplay muted loop playsinline controls aria-label="Vidéo de présentation Voisin d’Or"></video>
+        </figure>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal">
+      <h2>L’idée en une phrase</h2>
+      <p>Une personne âgée, ou un proche qui l’accompagne, peut trouver un jeune disponible près de chez elle pour un service ponctuel ou régulier.</p>
+      <div class="home-mini-grid">
+        <article><strong>Proche</strong><span>Une aide dans le quartier.</span></article>
+        <article><strong>Simple</strong><span>Un besoin clair, un créneau, un échange.</span></article>
+        <article><strong>Humain</strong><span>Le service crée aussi du lien.</span></article>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="comment-ca-marche">
+      <p class="eyebrow">COMMENT ÇA MARCHE</p>
+      <h2>Quatre étapes, pas plus.</h2>
+      <p>Pas de dossier compliqué : on crée son accès, on dit qui a besoin d’aide, on trouve un voisin disponible et on se rencontre.</p>
+      <div class="steps-grid" style="margin-top:24px">
+        <div class="product-step"><span class="step-num">1</span><strong>Créez votre accès</strong><p>Prénom, nom, e-mail et téléphone : vous recevez un lien de connexion, sans mot de passe à retenir.</p></div>
+        <div class="product-step"><span class="step-num">2</span><strong>Dites qui a besoin d’aide</strong><p>Pour vous-même, ou pour un proche que vous accompagnez, toujours avec son accord.</p></div>
+        <div class="product-step"><span class="step-num">3</span><strong>Trouvez un voisin disponible</strong><p>Filtrez par service, distance et disponibilité pour voir qui peut aider près de chez vous.</p></div>
+        <div class="product-step"><span class="step-num">4</span><strong>Envoyez une demande et rencontrez-vous</strong><p>Choisissez un des créneaux publiés par le jeune et envoyez votre demande. Le numéro de téléphone s’affiche une fois la demande acceptée.</p></div>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="services">
+      <h2>Nos services</h2>
+      <p class="muted">Les besoins du quotidien, à faire glisser d’un geste - comme dans une vraie application.</p>
+      <div class="service-tiles">
+        <article class="service-tile" style="--tile-c:#FFC145">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12.5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L6 8Z M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+          <strong>Courses</strong>
+          <span>Faire les courses ou récupérer un colis.</span>
+        </article>
+        <article class="service-tile" style="--tile-c:#1FAF98">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h4v4h1a2 2 0 0 1 2 2v2.6l1.4 1.4a1 1 0 0 1 .6.9V20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9.1a1 1 0 0 1 .6-.9L8 8.6V6h1V2Z M8 6h8"/></svg></span>
+          <strong>Ménage</strong>
+          <span>Un coup de propre léger et régulier.</span>
+        </article>
+        <article class="service-tile" style="--tile-c:#FF8A65">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L2 19l3 3 6.3-6.3a5 5 0 0 0 6.4-6.4L15 12l-3-3 2.7-2.7"/></svg></span>
+          <strong>Bricolage</strong>
+          <span>Petites réparations et objets à fixer.</span>
+        </article>
+        <article class="service-tile" style="--tile-c:#9B6BFF">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v13H4zM1 20h22l-3-4H4z"/></svg></span>
+          <strong>Informatique</strong>
+          <span>Téléphone, tablette et ordinateur expliqués simplement.</span>
+        </article>
+        <article class="service-tile" style="--tile-c:#4CAF7D">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20C4 10 12 4 20 4c0 10-6 16-16 16Z M4 20c4-4 8-8 16-16"/></svg></span>
+          <strong>Jardinage</strong>
+          <span>Arroser, tailler, désherber un petit coin de verdure.</span>
+        </article>
+        <article class="service-tile" style="--tile-c:#FF6B5B">
+          <span class="service-tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6Z M2 11h20 M8 11V8a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/></svg></span>
+          <strong>Cuisine</strong>
+          <span>Préparer un repas ou cuisiner à plusieurs.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal">
+      <h2>Les trois personnes au cœur du service</h2>
+      <div class="home-cards three">
+        <article><img class="home-photo" src="assets/personas/persona-lucas-storyboard.png" alt="Portrait illustré de Lucas"><h3>Lucas</h3><p>Étudiant en communication, il souhaite rendre service près de chez lui pendant ses temps libres.</p></article>
+        <article><img class="home-photo" src="assets/personas/persona-camille-storyboard.png" alt="Portrait illustré de Camille"><h3>Camille</h3><p>Accompagnatrice, elle organise une aide pour sa grand-mère sans décider à sa place.</p></article>
+        <article><img class="home-photo" src="assets/personas/persona-madeleine-storyboard.png" alt="Portrait illustré de Madeleine"><h3>Madeleine</h3><p>Bénéficiaire, elle veut rester autonome, être aidée simplement et garder un contact humain.</p></article>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="confiance">
+      <p class="eyebrow">CADRE DE CONFIANCE</p>
+      <h2>L’entraide, jamais un paiement obligatoire.</h2>
+      <p>Voisin d’Or reste un service entre voisins. Quatre principes simples encadrent chaque échange.</p>
+      <div class="principle-grid">
+        <div class="principle"><b>01</b><p><strong>Le respect avant tout.</strong><br>On échange avec bienveillance et on respecte les horaires convenus.</p></div>
+        <div class="principle"><b>02</b><p><strong>L’accord du proche.</strong><br>Un accompagnateur agit toujours avec l’accord de la personne qu’il aide.</p></div>
+        <div class="principle"><b>03</b><p><strong>Le téléphone protégé.</strong><br>Le numéro n’est partagé qu’une fois le rendez-vous confirmé.</p></div>
+        <div class="principle"><b>04</b><p><strong>Le pourboire est libre.</strong><br>Jamais un paiement obligatoire : juste un merci, si on le souhaite, donné directement.</p></div>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="tarifs">
+      <p class="eyebrow">TARIFS & PARTENAIRES</p>
+      <h2>Un service gratuit, entre voisins.</h2>
+      <div class="tarifs-grid home-mini-grid">
+        <article><strong>Gratuit</strong><span>Aucun abonnement, aucune commission. Seul un pourboire libre peut être donné directement entre voisins, s’ils le souhaitent.</span></article>
+        <article><strong>Partenaires</strong><span>Voisin d’Or est ouvert aux associations de quartier et aux structures d’aide à domicile de la Métropole de Lyon qui partagent cette même envie d’entraide.</span></article>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="temoignages">
+      <p class="eyebrow">TÉMOIGNAGES</p>
+      <h2>Ils en parlent.</h2>
+      <div class="testi-grid">
+        <article class="testi-card">
+          <div class="testi-head"><img src="assets/personas/persona-camille-accompagnatrice.png" alt="Camille"><span><strong>Camille</strong><span>Accompagnatrice</span></span></div>
+          <blockquote>« Grâce à Voisin d’Or, j’ai trouvé quelqu’un de confiance pour aider ma grand-mère, sans avoir à tout gérer moi-même. »</blockquote>
+        </article>
+        <article class="testi-card">
+          <div class="testi-head"><img src="assets/personas/persona-lucas-jeune-volontaire.png" alt="Lucas"><span><strong>Lucas</strong><span>Jeune volontaire</span></span></div>
+          <blockquote>« Je rends service près de chez moi entre deux cours, et chaque rencontre est différente. »</blockquote>
+        </article>
+        <article class="testi-card">
+          <div class="testi-head"><img src="assets/personas/persona-madeleine-beneficiaire.png" alt="Madeleine"><span><strong>Madeleine</strong><span>Bénéficiaire</span></span></div>
+          <blockquote>« On m’aide à faire mes courses et on prend le temps de discuter. Ça change ma semaine. »</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio-panel home-band reveal" id="faq">
+      <p class="eyebrow">FOIRE AUX QUESTIONS</p>
+      <h2>Vos questions, nos réponses.</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Est-ce que Voisin d’Or coûte quelque chose ?</summary>
+          <p>Non. La mise en relation est gratuite. Seul un pourboire libre et facultatif peut être donné directement, de la main à la main, entre le jeune et la personne aidée.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Comment savoir si la personne en face est fiable ?</summary>
+          <p>Chaque profil affiche une présentation, les services proposés et les disponibilités. Le numéro de téléphone n’est échangé qu’une fois le créneau confirmé par les deux personnes.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ma grand-mère ne sait pas utiliser un smartphone, comment ça marche pour elle ?</summary>
+          <p>Un proche accompagnateur peut créer et organiser les demandes à sa place, toujours avec son accord. La personne âgée reste décisionnaire.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quels services puis-je demander ?</summary>
+          <p>Courses, ménage léger, petit bricolage, aide informatique, jardinage, cuisine partagée… et d’autres petits coups de main du quotidien.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Comment se passe la première rencontre ?</summary>
+          <p>Vous choisissez un créneau ensemble dans l’application. Le numéro de téléphone s’affiche une fois le rendez-vous confirmé, pour régler les derniers détails de vive voix.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="studio-panel reveal" id="contact">
+      <div class="cta-band">
+        <p class="eyebrow" style="background:#fff;">CONTACT</p>
+        <h2>Une question, une idée?</h2>
+        <p>Écrivez-nous : nous répondons à toutes les questions sur Voisin d’Or, le projet et son fonctionnement.</p>
+        <div class="cta-band-actions">
+          <a class="home-primary" style="text-decoration:none;display:inline-flex;align-items:center" href="mailto:manel.saadane3@univ-lyon2.fr">Nous écrire</a>
+         
+        </div>
+        <p class="cta-mail">manel.saadane3@univ-lyon2.fr</p>
+      </div>
+    </section>
+
+    <section class="studio-panel reveal">
+      <p class="eyebrow">INFORMATIONS</p>
+      <h2 style="margin-bottom:18px">Mentions légales, CGV et confidentialité</h2>
+      <div class="legal-grid">
+        <article>
+          <h3>Mentions légales</h3>
+          <p>Voisin d’Or est édité à titre de démonstration. </p>
+        </article>
+        <article>
+          <h3>Conditions générales</h3>
+          <p>Voisin d’Or est un service gratuit de mise en relation entre voisins. Aucun paiement n’est traité sur la plateforme : le pourboire, s’il est donné, se fait directement entre les personnes, en dehors de l’application.</p>
+        </article>
+        <article>
+          <h3>Confidentialité</h3>
+          <p>Les informations saisies dans cette démonstration ne sont pas conservées et restent fictives.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="studio-footer">
+    <span>Voisin d’Or - la solidarité commence au coin de la rue.</span>
+    <span>Petits services. Grands liens.</span>
+  </footer>
+
+  <script>
+    (function(){
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && revealEls.length){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting){
+              entry.target.classList.add('reveal-in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.15});
+        revealEls.forEach(function(el){ io.observe(el); });
+      } else {
+        revealEls.forEach(function(el){ el.classList.add('reveal-in'); });
+      }
+    })();
+  </script>
+</body>
+</html>
